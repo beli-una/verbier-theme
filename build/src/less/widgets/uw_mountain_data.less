@@ -1,0 +1,508 @@
+.skiing_verbier_small,
+.skiing_verbier_medium,
+.skiing_verbier_large{
+
+    cursor: pointer;
+    background-color: white;
+	
+	&.text {
+		position: absolute;
+		top: 0;
+		background: transparent;
+	}
+    
+    >div{
+        width: 100%;
+        height: 100%;
+		
+        a, img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            
+            span{
+            
+                border: 1px solid white;
+                padding: 5px;
+                color: white;
+                text-transform: uppercase;
+            }
+            
+            background-image: url('../media_assets/images/slideout_images_bg_off.png');
+        }
+        
+        a:hover, img{
+            background-image: url('../media_assets/images/slideout_images_bg_on.png');
+        }
+    }
+}
+
+
+.skiing_verbier_small{
+    
+    float: left;
+    width: 258px;
+    height: 150px;
+    margin-top: 15px;
+    margin-left: 16px;
+    margin-bottom: 15px;
+    
+    >div{
+        
+        a{
+           
+            span{   
+                
+                line-height: 150px;
+            }
+        }
+    }
+    
+    &.selected{
+		
+		>div {
+	        a{
+	            background-image: url('../media_assets/images/slideout_images_bg_on.png');
+	        }
+		}
+        margin-bottom: 0px;
+        border-left: 1px solid lightgrey;
+        border-right: 1px solid lightgrey;
+    }
+}
+
+.skiing_verbier_small:first-child{
+    
+    margin-left: 0px;
+}
+
+.skiing_verbier_medium{
+    
+    width: 348px;
+    height: 209px;
+    
+    >div{
+        
+        a{
+            
+            span{
+        
+                line-height: 209px;
+            }
+        }
+    }
+}
+
+.skiing_verbier_large{
+    
+    width: 532px;
+    height: 210px;
+    
+    >div{
+        
+        a{
+            
+            span{
+        
+                line-height: 210px;
+            }
+        }
+    }
+}
+
+#skiing_verbier_small_1{background-image: url('../media_assets/images/skiing_verbier_4_valleys.jpg');background-repeat: no-repeat;}
+#skiing_verbier_small_2{background-image: url('../media_assets/images/skiing_verbier_verbier.jpg');background-repeat: no-repeat;}
+#skiing_verbier_small_3{background-image: url('../media_assets/images/skiing_verbier_bruson.jpg');background-repeat: no-repeat;}
+#skiing_verbier_small_4{background-image: url('../media_assets/images/skiing_verbier_savoleyres.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_1{background-image: url('../media_assets/images/skiing_verbier_snowpark.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_2{background-image: url('../media_assets/images/skiing_verbier_heliski_free_ride.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_3{background-image: url('../media_assets/images/skiing_verbier_learning_areas.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_4{background-image: url('../media_assets/images/skiing_verbier_cross_country.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_5{background-image: url('../media_assets/images/skiing_verbier_ski_touring.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_6{background-image: url('../media_assets/images/skiing_verbier_guides_ski_school.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_7{background-image: url('../media_assets/images/skiing_verbier_guides_ski_shop.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_8{background-image: url('../media_assets/images/skiing_verbier_disabled_skiing.jpg');background-repeat: no-repeat;}
+#skiing_verbier_medium_9{background-image: url('../media_assets/images/skiing_verbier_guides_skiline.jpg');background-repeat: no-repeat;}
+#skiing_verbier_large_1{background-image: url('../media_assets/images/skiing_verbier_apres_ski.jpg');background-repeat: no-repeat;}
+#skiing_verbier_large_2{background-image: url('../media_assets/images/skiing_verbier_passes_lifts.jpg');background-repeat: no-repeat;}
+
+
+#skiing_verbier_cta_section_1,
+#skiing_verbier_cta_section_2,
+#skiing_verbier_cta_section_3,
+#skiing_verbier_cta_section_4,
+#skiing_verbier_cta_section_5{
+    
+    .uw_text{
+    
+        p{
+            padding: 20px 20px 10px 20px;
+            text-align: center;
+        }
+    }
+    
+    font-size: 16px;
+    line-height: 22px;
+    
+    .uw_link_button{
+        
+        text-transform: uppercase;
+    }
+}
+
+#skiing_verbier_cta_section_1{
+    
+    height: 375px;
+
+    .grid_0_5{
+        
+        width: 532px;
+    }
+    
+    .grid_0_5:first-child{
+        
+        margin-right: 16px;
+    }
+}
+
+#skiing_verbier_cta_section_2,
+#skiing_verbier_cta_section_3,
+#skiing_verbier_cta_section_4{
+    
+    height: 370px;
+
+    .grid_0_333{
+        width: 348px;
+        margin-left: 18px;
+    }
+    
+    .grid_0_333:first-child{
+        margin-left: 0px;
+    }
+}
+
+#skiing_verbier_cta_section_4{
+	height: auto;
+}
+
+// PHASE 1 - TEMP FIX
+
+.skiing_verbier_asset{
+	
+	margin-bottom: 15px;
+}
+
+.skiing_verbier_video_cta,
+.skiing_verbier_web_tv{
+	
+	display: none;
+}
+
+//
+
+.skiing_verbier_video_cta{
+	
+    margin-top: -50px;
+
+    >div{
+        a{
+            span{
+                display: inline-block;
+                line-height: 50px;
+                text-align: center;
+                width: 100%;
+                height: 50px;
+                color: white;
+                background-image: url('../media_assets/images/slideout_images_bg_off.png');
+            }
+            
+        }
+    }
+}
+
+.skiing_verbier_title{
+    
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    
+    >div{
+        
+        padding-top: 75px;
+    
+        h1{
+        
+            color: white;
+            font-size: 50px;
+            text-shadow: 1px 2px #BBB;
+        }
+    }
+}
+
+.skiing_verbier_info{
+    
+    display: inline-block;
+	height: 400px;
+    
+    a{
+        color: #48a0cf;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+    
+    h3{
+        font-size: 24px;
+        line-height: 30px;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    
+    p{
+        font-size: 16px;
+        line-height: 22px;
+        color: #333;
+    }
+    
+    em{
+        font-weight: bold;
+    }
+    
+    .panel1,
+    .panel2{
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 20px;
+        
+        >p{
+            padding-bottom: 20px;
+        }
+    }
+    
+    .panel1{
+        width: 760px;
+        border-right: 1px solid lightgrey;
+    }
+
+    .panel2{
+        width: 310px;
+        margin-top: 108px;
+        
+        p:first-child{
+            margin-bottom: 45px;
+        }
+    }    
+    
+    .links{
+        
+        color: #48a0cf;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .contact{
+        line-height: 30px;
+    }
+}
+
+.skiing_verbier_btn_box{
+    position: relative;
+    z-index: 2;
+}
+
+.skiing_verbier_info_box{
+    
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
+    
+    border: 1px solid lightgrey;
+    margin-bottom: 85px
+}
+
+.skiing_verbier_web_tv{
+    
+    min-height:605px;
+    background-image: url('../media_assets/images/skiing_verbier_01.jpg');
+    background-repeat: no-repeat;
+
+    .webtv-video-title{
+        padding: 0px;
+        font-size: 24px;
+        color: white;
+        background-color: #333;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-indent: 20px;
+    }
+    
+    .webtv-playlist-item{
+        
+        a{
+            color: white;
+        }
+    }
+    
+    #section-playlist{
+        background-color: #333;
+        margin-top: 0px;
+        
+        .pagination{
+            display: inline-block;
+            width: 100%;
+            height: 10px;
+            
+            ul{
+                display: table;
+                margin: 0px auto;
+            
+                li{
+                
+                    .pagination_circle;
+                }
+                
+                li:first-child,
+                li:first-child.selected{
+                    
+                    margin-left: 0px;
+                }
+                
+                li.selected{
+                
+                    .pagination_circle_selected;
+                }
+            }
+        }
+    }
+    
+    .web_tv_link{
+        color: #48a0cf;
+        font-size: 13px;
+        display: inline-block;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+.download_ski_map,
+.interactive_map{
+    
+    margin-right: 50px;
+}
+
+.download_ski_map,
+.interactive_map,
+.deg_360_view{
+    
+    float: left;
+
+    >div{
+        a{
+            display: inline-block;
+            width: auto;
+            height: 22px;
+            padding-left: 30px;
+            line-height: 22px;
+        }
+    }
+}
+
+.download_ski_map{
+
+    >div{
+        a{
+            background-image: url('../media_assets/images/download_ski_map.jpg');
+            background-repeat: no-repeat;    
+        }
+    }
+}
+
+.interactive_map{
+
+    >div{
+        a{
+            background-image: url('../media_assets/images/interactive_map.jpg');
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.deg_360_view{
+
+    >div{
+        a{
+            background-image: url('../media_assets/images/360_view.jpg');
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.skiing_verbier_map_box{
+
+    text-align: center;
+    
+    .spacer{
+        
+        display: inline-block;
+    }
+}
+
+.uw_mountain_data{
+    
+    position: relative;
+    margin: 0px auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    width: 1050px;
+    height: 156px;
+    background-image: url('../media_assets/images/mountain_data.jpg');
+    background-repeat: no-repeat;
+    
+    >div{
+    
+        table{
+        
+            position: relative;
+            top: 40px;
+            width: 100%;
+            height: 75px;
+            
+            tr{
+            
+                td{
+                    text-align: center;
+                    vertical-align: middle;
+                    color: white;
+                    border-left: 1px solid white;
+                    
+                    .label{
+                    
+                        font-size: 14px;
+                        width: 100%;
+                        display: block;
+                    }
+                    
+                    .value{
+                        
+                        font-size: 50px;
+						line-height: 50px;
+                    
+                        sup{
+                        
+                            font-size: 24px;    
+                        }
+                    }
+                }
+                
+                td:first-child{
+                
+                    border-left: none;
+                }
+            }
+        }
+    }
+}

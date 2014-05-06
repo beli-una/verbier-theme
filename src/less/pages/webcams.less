@@ -1,0 +1,119 @@
+#webcam_thumbs_section{
+    overflow: hidden;
+    height: 180px;
+    .uw_text{
+    
+        p{
+            padding: 20px 20px 10px 20px;
+            text-align: center;
+        }
+    }
+    
+    font-size: 16px;
+    line-height: 22px;
+    
+    .uw_link_button{
+        
+        text-transform: uppercase;
+    }
+}
+.webcam_thumb{
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+	
+	&.text {
+		position: absolute;
+		top: 0;
+		background: transparent;
+	}
+    img{
+        width: 100%;
+        height: 150px;
+    }
+    >div{
+        width: 100%;
+        height: 150px;
+		position: absolute;
+        top: 0;
+        left: 0;
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            
+            span{
+            
+                border: 1px solid white;
+                padding: 5px;
+                color: white;
+                text-transform: uppercase;
+            }
+            
+            background-image: url('../media_assets/images/slideout_images_bg_off.png');
+        }
+        
+        a:hover{
+            background-image: url('../media_assets/images/slideout_images_bg_on.png');
+        }
+    }
+}
+.webcam_thumb{
+    
+    float: left;
+    width: 258px;
+    height: 150px;
+    margin-top: 15px;
+    margin-left: 16px;
+    margin-bottom: 15px;
+    
+    >div{
+        
+        a{
+           
+            span{   
+                
+                line-height: 150px;
+            }
+        }
+    }
+    
+    &.selected{
+		background: #555555;
+		height: 180px;
+		
+		>div {
+	        a{
+	            background-image: url('../media_assets/images/slideout_images_bg_on.png');
+	        }
+		}
+        margin-bottom: 0px;
+        border-left: 1px solid lightgrey;
+        border-right: 1px solid lightgrey;
+    }
+}
+
+.webcam_thumb:first-child{
+    
+    margin-left: -1px;
+}
+.webcam_thumb_box{
+    width: 5000px !important;
+    height: 180px;
+    overflow: hidden;
+}
+#webcam_pages_holder{
+    text-align: center;
+    a{
+        width: 40px;
+        height: 40px;
+        font-size: 0px;
+        display: inline-block;
+        text-indent: -9999px;
+        background: url('../media_assets/images/webcam_page_off.png') no-repeat 0 50%;
+        &:hover, &.selected{
+            background: url('../media_assets/images/webcam_page_on.png') no-repeat 0 50%;
+        }
+    }
+}

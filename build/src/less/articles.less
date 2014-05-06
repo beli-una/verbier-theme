@@ -1,0 +1,393 @@
+.uw_tourism_event_list, .uw_geotrail_list{
+
+    width: 1096px;
+    height: 420px;
+    margin: 0px auto;
+}
+
+.event_menu_tab{
+
+    width: 100% !important;
+    
+    .article_h1{
+    
+        >div{
+            margin-top: 50px;
+        }
+    }
+}
+
+.article_h1,
+.article_h2,
+.article_a{
+    display: block;
+	//width: 100%;
+	width: 1096px;
+	margin: 0px auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.article_h1{
+    
+    >div{
+        
+        //margin-top: 50px;
+        
+        display: inline-block;
+	    padding-left: 100px;
+	    padding-right: 100px;
+	    height: 1px;
+	    line-height: 0px;
+	    background-color: #cecece;
+	    font-family: 'brandon-grotesque';
+        
+        >h1{
+            font-weight: 300;
+            text-align: center;
+            display: inline-block;
+            margin-top: -9px;
+            margin-right: 20px;
+            background-color: white;
+            width: 100%;
+            line-height: 20px;
+            font-size: 30px;   
+        }
+    }
+}
+
+.article_h2,
+.article_a{
+    
+    >div{
+        
+        >h2,
+        >a{
+            position: relative;
+            font-family: 'brandon-grotesque';
+            display: block;
+            margin-top: 12px;
+            margin-bottom:20px;
+            line-height: 13px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 13px;
+            color: #419acc;
+            text-decoration:none;
+        }
+    }
+}
+
+/**********************************
+ARTICLES
+**********************************/
+
+.article_group{
+    
+	padding-left:20px;
+}
+
+.article_container_small{
+    
+    background-color: white;
+    
+	width: 340px;
+	height: 420px;
+	display: block;
+	float: left;
+	overflow: hidden;
+
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ededed;
+
+	margin-left: 20px;
+    margin-bottom:20px;
+
+    font-family: 'brandon-grotesque';
+    color: #333333;
+	
+	position: relative;
+	z-index: 10;
+
+    //#####
+	
+	&:nth-child(3n+0){
+		margin-right: 18px;
+	}
+	
+	&:nth-child(3n+1){
+		margin-left: 18px;
+	}
+	
+    &.selected {
+        margin-bottom: 0px;
+        height: 440px;
+        border: 1px solid #555555;
+        border-bottom: 1px solid white;
+    }
+    
+    .article_small_img{
+    	display: block;
+        overflow: hidden;
+    	width:338px;
+    	height:210px;
+    	margin-bottom: 16px;
+        background-color: lightgrey;
+        img{
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            min-height: 215px;
+        }
+    }
+
+    .horizontal{
+        
+    	height:100%;
+    }
+
+   	.vertical{
+        
+   		width: 100%;
+   	}
+    
+    a.article_small_img_link, a.article_small_img_link:link,a.article_small_img_link:visited {
+        display: block;
+        z-index: 15;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 210px;
+        width: 338px;
+        background-image: url('transparent.gif');
+    } 
+
+    a.article_small_img_link:hover{
+        background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/51/original/article_see_on.png?1382371232');
+    }
+
+    //#####
+    .article_container_small_text{
+        
+        h1{
+            font-weight: 400;
+            font-size:20px;
+            text-transform: uppercase; 
+            padding: 0px;
+            margin: 0px 16px 10px 16px;
+            line-height: 24px;
+        }
+    
+        h2{
+            font-weight: 400;
+            font-size:15px;
+            text-transform: uppercase;
+            padding: 0px;
+            margin: 0px 16px 4px 16px;
+        }
+    
+        p{
+            font-weight: 300;
+            font-size:15px;
+            text-transform: none;
+            padding: 0px;
+            line-height: 22px;
+            margin: 0px 15px 10px 15px;
+        }
+    }
+}
+
+.article_container_search{
+    
+	width: 350px;
+	height: 420px;
+	display: block;
+	float: left;
+	overflow: hidden;
+
+    background-color: lightgrey;
+
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ededed;
+
+    margin-right: 15px;
+    margin-bottom:15px;
+
+    font-family: 'brandon-grotesque';
+    color: #333333;
+
+    input[type=submit]{
+    	position: absolute;
+    	top: 267px;
+		left: 20px;
+    	width: 310px;
+    	height: 45px;
+
+    	background-color: #bf1700;
+    	border-width: 0px;
+    	border-style: none;
+    	color: white;
+    	font-family: 'brandon-grotesque';
+    	text-transform: uppercase;
+    	font-weight: 300;
+    	font-size:14px;
+
+    }
+
+    #select {
+    	position: absolute;
+    	top: 210px;
+		left: 20px;
+    	width: 310px;
+    	height: 45px;
+
+    	display: block;
+    	background-color: white;
+    	font-family: 'brandon-grotesque';
+    	text-transform: uppercase;
+    	font-weight: 400;
+    	font-size:15px;
+    	color: #333333;
+    	text-indent: 20px;
+    	line-height: 46px;
+
+        background-image: url('../media_assets/images/form_select_arrow.png');
+        
+    	background-position: 260px;
+		background-repeat: no-repeat;
+
+
+    }
+}
+
+/**********************************
+ACCOMMODATION ARTICLE
+**********************************/
+
+.accommodation_container_small{
+	
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+	
+	&:nth-child(3n+1) {
+		margin-left: 8px;
+	}
+	
+	position: relative;
+    
+    background-color: white;
+    
+    width: 350px;
+    height: 420px;
+    display: block;
+    float: left;
+    overflow: hidden;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ededed;
+
+    margin-right: 15px;
+    margin-bottom:15px;
+
+    font-family: 'brandon-grotesque';
+    color: #333333;
+	    
+    .article_small_img{
+        overflow: hidden;
+        width:350px;
+        height:210px;
+        margin-bottom: 16px;
+        background-color: lightgrey;
+        
+        img{
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            min-height: 210px;
+        }
+    }
+    
+    .horizontal{
+        
+        height:100%;
+    }
+
+    .vertical{
+        
+        width: 100%;
+    }
+
+    a.article_small_img_link, a.article_small_img_link:link,a.article_small_img_link:visited {
+        float: left;
+        height: 210px;
+        width: 350px;
+        margin-top: -226px;
+        position: relative;
+        background-image: url('transparent.gif');
+    } 
+
+    a.article_small_img_link:hover{
+        float: left;
+        height: 210px;
+        width: 350px;
+        margin-top: -226px;
+        position: relative;
+        background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/51/original/article_see_on.png?1382371232');
+    }
+    
+    h1{
+        font-weight: 400;
+        font-size:20px;
+        text-transform: uppercase; 
+        padding: 0px;
+        margin: 0px 16px 10px 16px;
+        line-height: 24px;
+    }
+
+    h2{
+        font-weight: 400;
+        font-size:15px;
+        text-transform: uppercase;
+        padding: 0px;
+        margin: 0px 16px 4px 16px;
+    }
+	
+	h3 {
+		font-weight: 400;
+		font-size: 15px;
+		padding: 0px;
+		margin: 0px 16px 4px 16px;
+		color: grey;
+		
+		&.upper {
+			text-transform: uppercase;
+		}
+	}
+
+    p{
+        font-weight: 300;
+        font-size:15px;
+        text-transform: none;
+        padding: 0px;
+        line-height: 22px;
+        margin: 0px 15px 10px 15px;
+    }
+}

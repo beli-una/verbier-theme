@@ -1,0 +1,89 @@
+.footer_section{
+    
+    position: relative;
+    z-index: 2;
+	
+	.ub_box {
+		&.grid_1_0 {
+			display: none;
+		}
+	}
+    
+    >.containers{
+        
+        width: 100%;
+        margin: 0px;
+        
+        .footer_box{
+            
+            background-color: #333333;
+            width: 100%;
+        
+            >.spacer{
+            
+                >.inner_box{
+                    
+                    >.uw_link_button{
+                        
+                        float: left;
+                    }
+                }
+                
+                .facebook,
+                .youtube,
+                .ios,
+                .android,
+                .radio{
+                    
+                    margin-right:20px;
+                    padding-top: 23px;
+                    
+                    >div{
+                        >a{
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            text-indent: -9999px;
+                            
+                            >span{
+                                color: transparent;
+                                line-height: 0px;
+                            }
+                        }
+                    }
+                }
+                
+                .facebook{
+                    
+                    .footer_btn( '../media_assets/images/footer_icon_facebook.png' );
+                    padding-left: 24px;
+                }
+                
+                .youtube{.footer_btn( '../media_assets/images/footer_icon_youtube.png' );}
+                .ios{.footer_btn( '../media_assets/images/footer_icon_ios.png' );}
+                .android{.footer_btn( '../media_assets/images/footer_icon_android.png' );}
+                .radio{.footer_btn( '../media_assets/images/footer_icon_radio.png' );}
+                
+                .footer_btn( @path ){
+                    
+                    >div{
+                        
+                        >a{background-image: url(@path);}
+                    
+                        >a:hover{
+                            
+                            margin-top: 2px;
+                        
+                            
+                            -webkit-transition: background-position 0.2s ease;
+                            -moz-transition: background-position 0.2s ease;
+                            -o-transition: background-position 0.2s ease;
+                            -ms-transition: background-position 0.2s ease;
+                            transition: background-position 0.2s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

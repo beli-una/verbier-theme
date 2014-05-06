@@ -1,0 +1,39 @@
+// FACTORY ANIMATIONS: ROUND 1
+.main_section {
+    .accommodation_container_small {
+      visibility: hidden;
+      height: 0;
+      opacity: 0;
+    }
+    &.animate {
+      .accommodations_masthead {
+        .uw_asset {
+          .transition(height 1s ease-out 3s;);
+          height: 165px;
+        }
+        .accommodations_dropdown_container {
+          .transition(top 1s ease-out 3s;);
+          top: 205px;
+        }
+      }
+      .accommodation_container_small {
+        .transition(visibility .1s linear 2s, height 1s ease-out 2s, opacity 1s ease-in 2s;);
+        visibility: visible;
+        height: 100%;
+        opacity: 1;
+      }
+      .uw_asset.asset_animate{
+        .transition(height 1s ease-out 3s;);
+        height: 165px;
+      }
+    }
+}
+.accommodation_container_small a.article_small_img_link,
+.accommodation_container_small a.article_small_img_link:link,
+.accommodation_container_small a.article_small_img_link:visited, {
+  opacity: 0;
+  .transition(opacity .25s linear;);
+}
+.accommodation_container_small a.article_small_img_link:hover {
+  opacity: 1;
+}

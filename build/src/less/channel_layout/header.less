@@ -1,0 +1,262 @@
+.main_section{
+    
+    display: table;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    
+    >.containers{
+        
+        width: 100%;
+        margin: 0px;
+		
+		//##########
+		
+		.main_menu_box{
+			
+			position: fixed;
+		}
+		
+		/*
+		.main_menu_box{
+			
+			position: fixed;
+		}
+		
+		.main_menu_box{
+			
+			&.large_screen{
+			
+				position: fixed;
+			}
+			
+			&.small_screen{
+			
+				position: absolute;
+			}
+		}
+		*/
+		
+		//##########
+        
+        .main_menu_box{
+            
+            left: 0px;
+            z-index: 3;
+            width: 154px;
+            min-height: 100%;
+            background-color: #ebebeb;
+            -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+            -moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.5);
+            box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.5);
+            
+            >.spacer{
+            
+                width: 154px;
+                min-height: 100%;
+                
+                >.inner_box{
+                    position: relative;
+                    width: 154px;
+                    min-height: 100% !important;
+                    
+                    .logo{
+                        position: relative;
+                        width: 154px;
+                        height: 96px;
+                        background: url(../media_assets/images/verbier_logo.png) center center no-repeat;
+                    }
+                    
+                    //
+                    .btn_weather{
+                    
+                        >div{
+                            >a{
+                                >span{
+                                    background-image: url(../media_assets/images/verbier_icon_weather.png);
+                                    background-size: contain;   
+                                }
+                            }
+                        }
+                    }
+                    
+                    .btn_report{>div{>a{>span{background-image: url(../media_assets/images/verbier_icon_report.png);}}}}
+                    .btn_webcams{>div{>a{>span{background-image: url(../media_assets/images/verbier_icon_webcams.png);}}}}
+                    .btn_webtv{>div{>a{>span{background-image: url(../media_assets/images/verbier_icon_webtv.png);}}}}
+                    
+                    .btn_weather, .btn_report, .btn_webcams, .btn_webtv{
+                        
+                        float: left;
+                        
+                        >div{
+                            >a{
+                                >span{
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .btn_weather,
+                    .btn_report,
+                    .btn_webcams,
+                    .btn_webtv{
+                        
+                        width: 50%;
+                        height: 55px;
+                        background-color: #ebebeb;
+                        border-bottom: 1px solid #cecece;
+                        text-align: center;
+                        
+                        >div{
+                            >a{
+                                
+                                color: #333;
+                                line-height: 40px;
+                                
+                                >span{
+                                    display: block;
+                                    height: 40px;
+                                    margin-top: 10px;
+                                    font-size: 11px;
+                                    padding-top: 10px;
+                                }
+                            }
+                        }
+						
+                        &:hover,
+						&.current,
+						&.selected{
+							background-color:#e1e1e1;
+                    		-webkit-transition: background-color 0.2s ease;
+                            -moz-transition: background-color 0.2s ease;
+                            -o-transition: background-color 0.2s ease;
+                            -ms-transition: background-color 0.2s ease;
+                            transition: background-color 0.2s ease;
+                        }
+                    }
+                    
+                    .btn_weather,
+                    .btn_webcams{
+                        
+                        >div{
+                            >a{
+                                >span{
+                                    border-right: 1px solid #cecece;
+                                }
+                            }
+                        }
+                        
+                        border-right: none;
+                    }
+                    
+                    .btn_report,
+                    .btn_webtv{
+                        
+                        >div{
+                            >a{
+                                >span{
+                                    border-right: none;       
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                    .buy_passes{
+                    
+                        a{
+                            span{
+                                display: table-cell;
+                                vertical-align: middle;
+                                text-align: center;
+                                width: 154px;
+                                height: 55px;
+                                font-size: 11px;
+                                border: 5px solid #ebebeb;
+                                color: white;
+                                background-color: #6a6a6a;
+                            }
+                        }
+                        
+						a:hover,
+						&.current,
+						&.selected{
+                        
+                            span{
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                    }
+                    
+                    .main_menu{
+                        
+                        float: left;
+                        width: 154px;
+                
+                        .nav_item_level_0{
+                            
+                            li{
+                                
+                                height:50px;
+                                background-color: #333333;
+                                border-bottom: 1px solid #707070;
+                                
+                                a, 
+                                a:link, 
+                                a:visited{
+                                    
+                                    display: block;
+                                    width: 136px;
+                                    height: 50px;
+                                    font-family: 'brandon-grotesque';
+                                    font-weight: bold;
+                                    font-size: 11px;
+                                    color: white;
+                                    position: relative;
+                                    padding-left: 20px;
+                                    
+                                    .vertical-align-middle;
+                                }
+                            }
+							
+                            li:hover,
+							li.current,
+							li.selected{
+                            
+                                border-top: 1px solid #707070;
+                                border-bottom: 1px solid #707070;
+                                overflow: hidden;
+                            }
+                            
+                            li:hover,
+							li.current,
+                            li.selected{
+                            
+                                background-color: white;
+                                border-left: 2px solid #ac1400;
+                                border-bottom: none;
+                                
+                                a{
+                                    color:#333333;
+                                    background-color: white;
+                                }
+                            }
+                            
+							li.current,
+                            li.selected{
+                            
+                                a{
+                                    cursor: default;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

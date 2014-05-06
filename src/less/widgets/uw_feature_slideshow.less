@@ -1,0 +1,227 @@
+.slideshow_text{
+    
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin-top: 200px;
+    
+    >div{
+        
+        position: relative;
+        width: 590px;
+        margin: 0px auto;
+    }
+}
+
+.uw_trails_slideshow,
+.uw_hotels_slideshow,
+.uw_listing_slideshow,
+.uw_feature_slideshow{
+    
+    position: relative;
+    z-index: 1;
+    
+    >span{
+        position: absolute;
+        width: 100%;
+        bottom: 30px;
+        display: block;
+        text-align: center;
+    }
+
+    .pagination{
+        
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        margin: 0px auto;
+        height: 10px;
+        
+        >span{
+            position: absolute;
+            width: 100%;
+        }
+        
+        li{
+            .pagination_circle;
+            font-size: 0px;
+            text-indent: -9999px;
+        }
+        
+        li:first-child,
+		li:first-child.selected{
+            margin-left: 0;
+        }
+        
+        li.selected{
+        
+            .pagination_circle_selected;
+        }
+    }
+    
+    >div{
+        
+        .slideshow_item{
+            
+            .title.asset_link {
+                width: 100%;
+                height: auto;
+				min-height: 700px;
+            }
+        }
+    
+        >a{
+            display: none !important;
+        }
+        
+        ol{
+
+            li{
+                
+                height: 700px;
+                overflow: hidden;
+                
+                a{
+                    img{
+                        position: absolute;
+                        bottom: 0px;
+                    }
+                }
+                .slideshow_asset_name,
+                .slideshow_asset_desc{
+                
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.uw_hotels_slideshow{
+    
+    height: 530px;
+    overflow: hidden;
+
+    >div{
+        
+        ol{
+
+            li{
+                
+                height: 530px;
+                
+                img{    
+                    
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.uw_listing_slideshow, .uw_hotels_slideshow{
+    
+    height: 530px;
+    overflow: hidden;
+	
+    >div{
+		
+		@media all {
+			img {
+				margin-top: -6%;
+			}
+	  	}
+
+		@media all and (min-width: 1100px) {
+			img {
+				margin-top: -6%;
+			}
+		}
+		@media all and (min-width: 1300px) {
+			img {
+				margin-top: -9%;
+			}
+		}
+		@media all and (min-width: 1400px) {
+			img {
+				margin-top: -11%;
+			}  
+		}
+		@media all and (min-width: 1600px) {
+			img {
+				margin-top: -15%;
+			}  
+		}
+		@media all and (min-width: 1900px) {
+			img {
+				margin-top: -20%;
+			}  
+		}
+        
+        ol{
+
+            li{
+                
+                height: 530px;
+				
+                img{    
+                    
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.uw_hotels_slideshow{
+    
+    height: 530px;
+    overflow: hidden;
+    
+    >div{
+        
+        @media all {
+            img {
+                margin-top: 0%;
+            }
+        }
+
+        @media all and (min-width: 1100px) {
+            img {
+                margin-top: 0;
+            }
+        }
+        @media all and (min-width: 1300px) {
+            img {
+                margin-top: 0;
+            }
+        }
+        @media all and (min-width: 1400px) {
+            img {
+                margin-top: -0;
+            }  
+        }
+        @media all and (min-width: 1600px) {
+            img {
+                margin-top: -10%;
+            }  
+        }
+        @media all and (min-width: 1900px) {
+            img {
+                margin-top: -15%;
+            }  
+        }
+        
+        ol{
+
+            li{
+                
+                height: 530px;
+                
+                img{    
+                    
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

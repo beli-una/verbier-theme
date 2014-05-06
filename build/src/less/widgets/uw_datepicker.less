@@ -1,0 +1,155 @@
+.uw_datepicker{
+    
+        position: absolute;
+        background: white;
+        width: 338px;
+        height: 402px;
+        
+        border: 1px solid lightgrey;
+        /*
+        -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        */
+
+    >div{
+        
+        #datepicker{ 
+        
+            .ui-datepicker-inline{
+                
+                padding:0px;
+            
+                .ui-datepicker-header{
+                
+                    .ui-datepicker-prev,
+                    .ui-datepicker-next{
+                    
+                        position: absolute;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        color: transparent;
+                        width: 45px;
+                        height: 45px;
+                        top: 7px;
+                        cursor: pointer;
+                    }
+                    
+                    .ui-datepicker-prev{
+                        background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/48/original/calendar_arrow_left.png?1382129777');
+                        left: 8px;
+                    }
+                    
+                    .ui-datepicker-next{
+                        background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/47/original/calendar_arrow_right.png?1382129694');
+                        left: 285px;	
+                    }
+                    
+                    .ui-datepicker-title{
+                    
+                        background-color: white;
+                        display: inline-table;
+                        vertical-align: middle;
+                        width: 325px;
+                        height: 45px;
+                        padding: 15px;
+                        margin: 7px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        color: #333333;
+                        font-size: 13px;
+                        border-color: #898989;
+                        border-style: solid;
+                        border-width: 1px;
+                    }
+                }
+                
+                .ui-datepicker-calendar{
+                
+                    >thead{
+                        text-transform: uppercase;
+                        color: #666666;
+                        font-size: 11px;
+                        border-bottom-width: 1px;
+                        border-color: #e5e5e5;
+                        border-style: solid;
+                        display: table;
+                        width: 338px;
+                        padding: 0px;
+                    
+                        >tr>th>span{
+                            display: table-cell;
+                            text-align: center;
+                            vertical-align: middle;
+                            height: 32px;
+                            width: 45px;
+                        }
+                    }
+                    
+                    >tbody{
+                        text-transform: uppercase;
+                        color: #333333;
+                        font-size: 11px;
+                        border-bottom-width: 1px;
+                        border-color: #e5e5e5;
+                        border-style: solid;
+                        display: table;
+                        width: 338px;
+                        
+                        >tr {
+                            border-bottom-width: 1px;
+                            border-color: #e5e5e5;
+                            border-style: solid;
+                        }
+                    
+                        a.ui-state-default, a.ui-state-default:link, a.ui-state-default:visited {
+                            display: table-cell;
+                            text-align: center;
+                            vertical-align: middle;
+                            height: 45px;
+                            width: 45px;
+                            font-size: 13px;
+                            color: #666666;
+                        }
+                    
+                        //
+                        a.ui-state-default:hover {
+                            display: table-cell;
+                            background-color:#c30008;
+                            text-align: center;
+                            vertical-align: middle;
+                            height: 45px;
+                            width: 45px;
+                            font-size: 13px;
+                            color: white;
+                        }
+                        //
+                    }
+                }
+            }
+        }
+    }
+    
+    //
+    .uw_red_button{
+        width: 128px;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+    //
+}
+
+.dp-start-highlight{
+    
+    a{
+        color: white !important;
+        background-color: #c30008;
+    }
+}
+
+.dp-highlight{
+    
+    a{
+        background-color: #fcf2f2;
+    }
+}

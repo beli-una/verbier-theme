@@ -1,0 +1,107 @@
+#travelbook-nav {
+	position: relative;
+	
+	&:hover, &.current {
+		.counter {
+			background-image: url(https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/277/original/mtb_large_red.png);
+		}
+	}
+	
+	.counter {
+		position: absolute;
+		top: 10px;
+		right: 7px;
+		width: 24px;
+		height: 31px;
+		background-image: url(https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/276/original/mtb_large_grey.png);
+		
+		.value {
+			text-align: center;
+			margin: 5px 0;
+			color: #FFF;
+			font-size: 13px;
+		}
+	}
+}
+
+.travel-block {
+	display: block;
+	float: left;
+	
+	.uw_tourism_event_list {
+		height: auto;
+	}
+}
+
+#travel_book_ribbon {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	width: 13px;
+	height: 20px;
+	
+	.my_travel_book_icon {
+		width: 100%;
+		height: 100%;
+		background-image: url(https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/275/original/travel-book-icon.png);
+	
+		&.selected {
+			background-image: url(https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/278/original/mtb_small_red.png);
+		}	
+	}
+
+	.info-text {
+		position: absolute;
+		width: 185px;
+		height: 20px;
+		top: 0;
+		right: 0;
+		text-align: right;
+		margin: 0 13px 0 0;
+		overflow: hidden;
+	
+		p {
+			display: none;
+			margin: 0;
+			position: absolute;
+			right: -200px;
+
+			color: #ac1400;
+
+			font-weight: 300;
+			font-size: 15px;
+			text-transform: none;
+			padding: 0px;
+			line-height: 22px;
+
+			&.selected {
+				display: block;
+			}
+		}
+	}
+	
+}
+
+.travel_heading {
+	> div {
+		margin-bottom: 30px;
+		display: block;
+		height: 1px;
+		width: 1080px;
+		line-height: 0px;
+		margin-left: 10px;
+		margin-top: 28px;
+		background-color: #cecece;
+		font-family: 'brandon-grotesque';
+		
+		> h2 {
+			text-transform: uppercase;
+			font-size: 24px;
+			font-weight: 400;
+			display: table-cell;
+			padding: 0px 10px;
+			background-color: white;
+		}
+	}
+	
+}

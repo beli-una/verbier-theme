@@ -1,0 +1,310 @@
+.accommodations_masthead{
+
+    .uw_heading{
+        
+        height: 96px;
+        
+        >div{
+        
+            margin-top: 50px;
+        }
+    }
+    
+    .uw_asset{
+        
+        display: block;
+        width: 100%;
+        height: 565px;
+        overflow: hidden;
+        
+        >div{
+            
+            img{
+            
+                width: 100%;
+            }
+        }
+    }
+    
+    .accommodations_dropdown_container{
+        
+        position: absolute;
+        top: 605px;
+		width: 1080px;
+		left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+				
+        z-index: 2;
+        
+        >div{
+            width: 1280px;
+            margin: 0px auto;
+        }
+    }
+}
+
+.accommodations_filter{
+
+    position: relative;    
+    z-index: 1;
+    height: 115px;
+    padding-top: 20px;
+    border-bottom: 1px solid lightgrey;
+	width: 1080px;
+	margin: 0 auto;
+    
+    >.containers{
+        margin: 0px auto;
+        
+        >.ub_subsection{
+        
+            width: 100%;
+            float: none;
+            
+            >.ub_box{
+                width: 25%;
+            }
+        }
+    }
+    
+    .ub_box{
+        width: auto;
+    }
+    
+    .accommodations_results{
+		
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 13px;
+        color: #a3a3a3;
+        height: 40px;
+        
+        .results,
+        .filters {
+            float: left;
+        }
+        
+        .results{
+            display: inline-block;
+            height: 30px;
+            padding-top: 8px;
+            padding-left: 21px;
+            padding-right: 10px;
+        }
+        
+        .close{
+            width: 30px;
+            text-align: center;
+        }
+    }
+}
+
+.accommodations_results_box{
+    position: relative;
+    z-index: 1;
+    width: 100% !important;
+}
+
+.accommodations_content{
+    padding-top: 20px;
+}
+
+.additive-filter-clear{
+    color: white;
+    background-color: #a3a3a3;
+}
+
+.additive-filter{
+    color: #666666;
+    background-color: #dcdcdc;
+}
+
+.additive-filter-clear,
+.additive-filter{
+    
+    margin-right: 10px;
+    font-size: 11px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    float: left;
+    height: 30px;
+    cursor: pointer;
+    
+    >span{
+        display: table-cell;
+        vertical-align: middle;
+        height: 30px;
+    }
+}
+
+
+
+
+.verbier_dropdown,
+.trip_dates_dropdown,
+.language_dropdown,
+.amenities_dropdown {
+    
+    position: relative;
+    z-index: 2;
+    
+    li{
+        display: table;
+        width: 98%;
+        padding-left: 2%;
+    }
+    
+    li.selected{
+        
+        a{
+            color: #B30007;
+        }
+    }
+    
+	//
+    .uw_link_button{
+    
+        a:hover{
+            
+            color: #333333;
+            background-color: white;
+            border: 1px solid lightgrey;
+            border-bottom: none;
+            
+            span{
+                display: table-cell;
+                vertical-align: middle;
+                height: 48px;
+            }
+        }
+    }
+	//
+}
+
+.trip_dates_dropdown{
+    
+	//
+    .uw_link_button{
+        
+        a, a:link, a:visited{
+        
+            display: block;
+            color: #cccccc;
+            font-size: 13px;
+            padding-left: 20px;
+            background-color: #666666;
+            width: 100%;
+            height: 50px;
+            vertical-align: middle;
+            border-color: #999999;
+            border-width: 1px;
+            border-style: solid;
+            background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/53/original/filter_arrow.png?1382380517');
+            background-position: right;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+        }
+        
+        span{
+            display: table-cell;
+            vertical-align: middle;
+            height: 48px;
+        }
+    }
+	//
+}
+
+.amenities_dropdown{
+    
+    .uw_html{
+        background-color: white;
+        border: 1px solid lightgrey;
+        width: 685px;
+        height: auto;
+        
+        table{
+            border-bottom: 1px solid lightgrey;
+            margin-top: 15px;
+            width: 100%;
+            height: auto;
+            
+            td{
+                border-left: 1px solid lightgrey;
+            }
+            
+            td:first-child{
+                border-left: none;
+            }
+        }
+        
+        .uw_red_button{
+            position: relative;
+			margin: 10px 0 10px 20px;
+			width: 128px;
+        }
+        
+        .filter_heading{
+            font-weight: bold;
+            display: table-cell;
+            font-size: 13px;
+            vertical-align: middle;
+            padding-left: 7px;
+            color: #333333;
+            height: 42px;
+            cursor: default;
+        }
+    }
+}
+
+.verbier_dropdown,
+.language_dropdown{
+    
+    background-color: white;
+
+    .uw_html{
+        width: 100%;
+        background-color: white;
+        border: 1px solid lightgrey;
+    }
+}
+
+.verbier_dropdown,
+.amenities_dropdown,
+.language_dropdown {
+    
+    .uw_html{
+        position: absolute;
+    }
+    
+    .uw_link_button{
+        
+        a, a:link, a:visited{
+        
+            display: block;
+            color: #cccccc;
+            font-size: 13px;
+            padding-left: 20px;
+            background-color: #666666;
+            width: 100%;
+            height: 50px;
+            vertical-align: middle;
+            border-color: #999999;
+            border-width: 1px;
+            border-style: solid;
+            
+            background-position: right;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            
+            background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/53/original/filter_arrow.png?1382380517');   
+        
+            span{
+                display: table-cell;
+                vertical-align: middle;
+                height: 48px;
+            }
+        }
+    }
+}

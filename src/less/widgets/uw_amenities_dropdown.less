@@ -1,0 +1,139 @@
+#amenities-dropdown{
+	
+    background: white;
+	width: 690px;
+	height: 410px;
+	
+	.apply-filter-box{
+		display: block;
+		float: left;
+		width: 690px !important;
+		height: 80px;
+		background-color: white;
+		border-top-width: 1px;
+		border-style: solid;
+		border-color: #cecece;
+
+		.apply-filters-button{
+			top: 20px !important;
+		}	
+	}
+}
+
+
+/*
+ * STARS [ START ]
+*/
+
+.amenities_dropdown{
+
+    .star{
+            .star_bg{
+                background-image: url('../media_assets/images/stars_black.png');
+                background-repeat: no-repeat;
+            }
+    
+        &.selected{
+        
+            .star_bg{
+            
+                background-image: url('../media_assets/images/stars_red.png');
+                background-repeat: no-repeat;    
+            }
+        }
+    }
+}
+
+.accommodation_star_0,
+.accommodation_star_1,
+.accommodation_star_2,
+.accommodation_star_3,
+.accommodation_star_4,
+.accommodation_star_5{
+
+    cursor: pointer;
+    overflow: hidden;
+    margin: -5px 0px 16px 16px;
+    height: 15px;
+}
+
+.accommodation_star_0{width: 1px;}
+.accommodation_star_1{width: 20px;}
+.accommodation_star_2{width: 39px;}
+.accommodation_star_3{width: 61px;}
+.accommodation_star_4{width: 82px;}
+.accommodation_star_5{width: 105px;}
+
+/*
+ * STARS [ END ]
+*/
+
+
+.amenities-rating-column{
+	display: block;
+	float: left;
+	width: 230px !important;
+	height: 330px;
+	background-color: white;
+	padding: 10px;
+	padding-top: 20px;
+
+	.accommodation_star_1,.accommodation_star_2,.accommodation_star_3,.accommodation_star_4,.accommodation_star_5{
+
+		padding-top: 10px;
+		padding-bottom: 16px;
+		margin: 0px 0px 16px 6px;
+	}
+
+}
+
+.amenities-column{
+	display: block;
+	float: left;
+	width: 230px !important;
+	height: 330px;
+	background-color: white;
+	padding: 10px;
+	padding-top: 20px;
+	border-left-width: 1px;
+	border-style: solid;
+	border-color: #cecece;
+}
+
+
+
+a.filter-choice, a.filter-choice:link, a.filter-choice:visited{
+
+	font-size: 13px;
+	vertical-align: middle;
+	padding-left: 7px;
+	color: #333333;
+	background-color: white;
+	width: 100%;
+	height: 42px;
+	display: table-cell;
+}
+
+a.filter-choice-selected, a.filter-choice-selected:link, a.filter-choice-selected:visited{
+
+	font-size: 13px;
+	vertical-align: middle;
+	padding-left: 7px;
+	color: #ca0007;
+	background-color: white;
+	width: 210px;
+	height: 42px;
+	display: table-cell;
+}
+
+a.filter-choice:hover, a.filter-choice-selected:hover{
+
+	font-size: 13px;
+	vertical-align: middle;
+	padding-left: 7px;
+	color: white;
+	background-color: #c00009;
+	width: 100%;
+	height: 42px;
+	display: table-cell;
+}

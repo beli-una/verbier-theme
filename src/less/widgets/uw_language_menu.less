@@ -1,0 +1,86 @@
+.uw_language_menu{
+    
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    >div{
+        
+        ul{
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            
+            li{
+                display: inline-block;
+                width: 154px; 
+                
+                span{
+                
+                    a{
+                        height: 40px;
+                        display: block;
+                        line-height: 43px;
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 11px;
+                        color: #419acc;
+                        background-color: white;        
+                    }
+                    
+                    a:hover{
+                        color: #999999;
+                    }
+                }
+            }
+        
+            li:first-child{
+                
+                width: 134px;
+                
+                span{
+                
+                    a, a:link, a:visited{
+                        
+                        margin-right: 20px;
+                        color: #333333;
+                        background-color: #ebebeb;
+                        border: 1px solid #cecece;
+                    }
+                
+                    a:hover{ .hover_state; }
+                }
+                
+                &.selected{
+                
+                
+                    span{ a{ .hover_state; }}
+                }
+                
+                .hover_state{
+                
+                    margin-right: 0px;
+                    padding-right: 20px;
+                    
+                    color: black;
+                    background-color:white;
+                    border: none;
+                    border-left: 2px solid #ac1400;
+                    
+                    -webkit-transition: background-color 0.2s ease;
+                    -moz-transition: background-color 0.2s ease;
+                    -o-transition: background-color 0.2s ease;
+                    -ms-transition: background-color 0.2s ease;
+                    transition: background-color 0.2s ease;
+                }
+            }
+        }
+
+        ul.shadow{
+
+            -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+            -moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.5);
+            box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.5);
+        }
+    }    
+}

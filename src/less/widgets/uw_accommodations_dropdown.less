@@ -1,0 +1,84 @@
+.uw_accommodations_dropdown{
+    
+    margin-right: 15px;
+    float: left;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid white;
+    color: white;
+	
+	background-image: url("https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/40/original/slideshow_button_arrow.png?1381981792");
+	
+	.grid_0_25{
+	
+		max-width: 320px !important;
+	}
+    
+    li{
+        vertical-align: middle;
+        padding-left: 10px;
+        width: 310px;
+        height: 40px;
+        float: none;
+        font-size: 13px;
+        padding-top: 12px;
+        display: none;
+        cursor: pointer;
+        border: 0px none white;
+    }
+    
+    li:first-child{
+        font-size: 20px;
+        padding-top: 12px;
+        display: block;
+        background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/55/original/filter_select_arrow_transparent.png?1382477849');
+		background-position: 270px -2px;
+		background-repeat: no-repeat;
+    }
+    
+    &.open{
+		
+		background-image: none;
+		
+    	box-shadow: 10px 10px;
+        -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
+        display: block;
+        background-color: white;
+        padding: 0px 10px 10px 10px;
+    
+        li {
+            color: #575454;
+            background-color: white;
+
+            &.selected{
+                color: #ca0007;
+                background-color: white;
+            }
+        }
+
+        li:first-child{
+        	pointer-events: none;
+        	background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/16/original/form_select_arrow.png?1381514996');
+			background-position: 270px -2px;
+			background-repeat: no-repeat;
+
+        }
+         
+        li:hover{
+            vertical-align: middle;
+            color: white;
+            background-color: #c00009;
+
+        }
+
+        li:first-child:hover{
+        	color: #575454;
+            background-color: white;
+            background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/16/original/form_select_arrow.png?1381514996');
+			background-position: 270px -2px;
+			background-repeat: no-repeat;
+
+        }
+    }
+}

@@ -1,0 +1,413 @@
+/**
+ * Hotels page
+*/
+
+.uw_ts_item_header {
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 300;
+}
+.hotel_address_title {
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+}
+.hotels_book_button {
+	position: absolute;
+	display: block;
+	background: #c10008;
+	background: -moz-linear-gradient(top, #c10008 0%, #af0007 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c10008), color-stop(100%, #af0007));
+	background: -webkit-linear-gradient(top, #c10008 0%, #af0007 100%);
+	background: -o-linear-gradient(top, #c10008 0%, #af0007 100%);
+	background: -ms-linear-gradient(top, #c10008 0%, #af0007 100%);
+	background: linear-gradient(to bottom, #c10008 0%, #af0007 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c10008', endColorstr='#af0007', GradientType=0);
+	padding-right: 20px;
+	padding-left: 20px;
+	height: 45px;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+	right: 30px;
+	top: 90px;
+	text-transform: uppercase;
+	
+	span{
+		display: table-cell;
+		height: inherit;
+		width: inherit;
+		vertical-align: inherit;
+	}
+}
+
+#masthead_hotels_side1 {
+	width: 200px;
+	height: 205px;
+	position: absolute;
+	display: block;
+}
+
+#masthead_hotels_side2 {
+	position: absolute;
+	display: block;
+	right: 0px;
+}
+.backtolist_button {
+	
+	position: absolute;
+	height: 40px;
+	top: 8px;
+	left: 9px;
+	
+	a{
+		display: table-cell;
+		vertical-align: middle;
+		height: 40px;
+		color: #b2b2b2;
+		text-transform: uppercase;
+		font-size: 11px;
+		padding-left: 40px;
+		background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/76/original/backtolist_button_arrow.png?1382900692');
+		background-repeat: no-repeat;
+	}
+}
+
+.tourism_establishment{
+	
+	&.establishment_type{
+	
+		height: 50px;
+		margin-top: 128px;
+		margin-left: 14px;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		filter: alpha(opacity=50);
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
+		
+		>img{
+			float: left;
+			height: 50px;
+			padding-left: 5px;			
+		}
+	}
+}
+
+.hotel_map_canvas {
+	height: 420px;
+	width: 510px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+}
+
+.hotels_masthead_sublinks {
+	top: 160px;
+	right: 30px;
+	position: absolute;
+	
+	a, a:link, a:visited{
+	
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #3399cc;
+		border-color: #d9d8d8;
+	}
+	
+	.right_bar{
+		border-right-width: 2px;
+		border-style: solid;
+		padding-right: 17px;
+		margin-right: 15px;
+	}
+}
+
+.rating {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	
+	div{
+		margin: auto;
+  		margin-top: 16px;
+	}
+}
+
+.uw_ts_item_details{
+	
+	>div{
+	
+		 >div{
+		
+			display: block;
+			float: left;
+		  	overflow: hidden;	
+		}
+	}
+	
+//	.column_0{
+//		padding-left: 20px;
+//	}
+	
+	.column_0, .column_1, .column_2, .column_3, .column_4 {
+		
+		display: block;
+		width: 180px;
+		padding-bottom: 20px;
+		padding-left: 15px;
+		
+		li{
+			padding-top: 20px;
+			font-weight: 400;
+			font-size: 15px;
+		}
+		
+		h3{
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 15px;
+		}
+		
+		ul{
+			padding-bottom: 30px;
+		}
+	}	
+}
+
+.uw_ts_logo {
+	
+	width: 255px;
+	padding-left: 30px;
+	padding-right: 15px;
+	overflow: hidden;
+	
+	img{
+		width: 100%;
+	}
+}
+
+.uw_ts_rates {
+  
+	padding: 20px;
+	
+	table{
+		width: 100%;
+  		text-align: left;
+	}
+	
+	th{
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 15px;
+		text-align: left;
+		display: table-cell;
+		padding-bottom: 16px;
+	}
+	
+	td{
+		font-weight: 400;
+		font-size: 15px;
+		padding: 16px 0px;
+		display: table-cell;
+	}
+	
+	.first{
+		padding-left: 20px;
+	}
+	
+	.even{
+		background-color: #f2f2f2;
+	}
+}
+
+.uw_ts_contact{
+	
+	a{
+		color: #333333;
+		padding-bottom: 10px;
+		line-height: 25px;
+		font-weight: 400;
+		font-size: 15px;
+		display: block;
+	}
+	
+	a.email{
+		width: 90px;
+		float: left;
+		color: #48a0cf;
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		display: block;
+		padding: 5px;
+		padding-left: 30px;
+		margin-bottom: 30px;
+		height: 35px;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/75/original/hotels_email.png?1382832083');
+	}
+	
+	a.vcard{
+		width: 90px;
+		float: left;
+		color: #48a0cf;
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		display: block;
+		padding: 5px;
+		padding-left: 30px;
+		margin-bottom: 30px;
+		height: 35px;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/74/original/hotels_vcard.png?1382832078');
+	}
+	
+	p{
+		padding-bottom: 20px;
+		line-height: 25px;
+		font-weight: 400;
+		font-size: 15px;	
+	}
+	
+	h2{
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 20px;
+		padding-bottom: 16px;
+		padding-left: 20px;	
+	}
+	
+	>div{
+	
+		>div{
+			display: block;
+			float: left;
+			overflow: hidden;
+		}
+	}
+	
+	.column_0, .column_1 {
+		
+		display: block;
+		width: 230px;
+		padding-bottom: 20px;
+		
+		ul{
+			padding-bottom: 30px;
+			
+			li{
+				padding-top: 20px;
+				font-weight: 400;
+				font-size: 15px;		
+			}
+		}
+		
+		h3{
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 15px;		
+		}
+	}
+}
+
+.uw_ts_contact .column_0 .opening > li,
+.uw_ts_contact .column_1 .opening > li {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: -8px;
+}
+.uw_ts_contact .column_0 {
+  padding-left: 20px;
+}
+.payment_methods_header h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.payment_type {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.payment_type > img {
+  padding-right: 5px;
+  height: 30px;
+  float: left;
+}
+/**********************************
+HOTELS PAGE
+**********************************/
+.ski_touring_gallery .gallery_item_image {
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 333px;
+  height: 200px;
+  display: block;
+}
+.ski_touring_gallery .gallery_item_image img {
+  display: block;
+  width: 333px;
+}
+.ski_touring_gallery .gallery_item_image a,
+.ski_touring_gallery .gallery_item_image a:link,
+.ski_touring_gallery .gallery_item_image a:visited {
+  display: block;
+  z-index: 10;
+  height: 200px;
+  width: 333px;
+  position: relative;
+  top: -200px;
+  background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/32/original/slideout_images_bg_off.png?1381945897');
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+.ski_touring_gallery .gallery_item_image a:hover {
+  display: block;
+  z-index: 10;
+  height: 200px;
+  width: 333px;
+  position: relative;
+  top: -200px;
+  background-image: url('https://factorylabs-unroole.s3.amazonaws.com/system/asset_images/33/original/slideout_images_bg_on.png?1381945905');
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+}
+.ski_touring_gallery .gallery_item_image span {
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  width: auto;
+  margin-top: 80px;
+}
+
+.ski-heading {
+	padding-top: 37px;
+}
+
+.ski-image img{
+	min-width: 100%;
+}
+
+#activities_content {
+	width: 1080px;
+	background-color: #ebebeb;
+	overflow: hidden;
+}
