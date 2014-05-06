@@ -108,11 +108,6 @@ function hide_empty_data(dataClass, dataAttr, displayClass, attr_update){
 			$(displayClass).hide();
 		}else{
 			var url = $(dataClass).data(dataAttr);
-      // Remove after testing before going live!!!
-      if (url == "http://online.citybreak.com/Accommodation/Details.aspx?onlineid=1178740756&PropertyId=77513&show=book") {
-        url = "http://online3.citybreak.com/1797402151/fr/fr-ch/hebergements/a407701/chalet-de-flore/details?filter=t%3Dflore&refcur=CHF"
-      }
-      // Remove after testing before going live!!!
 			if (url.indexOf("reservation.verbier.ch") > -1 || url.indexOf("citybreak.com") > -1) {
 				url = "/reservations?booking_url=" + encodeURIComponent(url);
 			}
