@@ -5,7 +5,7 @@
     </div>
     <div class="article_container_small_text">
         <h1>{{name}}</h1>
-        <h2>{{open_hours}}</h2>
+        <h2>{{open_hours.[0]}} - {{open_hours.[1]}}</h2>
         <p>{{desc}}</p>
     </div>
    	<div id="travel_book_ribbon">
