@@ -9,12 +9,24 @@
 	</div>
 
 	<div class="column_1">
-    <p>{{address}}</p>
-    <a href="tel:{{phone}}"> {{phone}}</a>
-    <a href="tel:{{fax}}"> {{fax}}</a>
-    <a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
-    <a href="{{website}}" target="_blank" class="blue_link">{{website}}</a>
-    <a href="{{vcard_url}}" target="_blank" class="vcard">VCARD</a>
+  	{{#if address}}
+      <p>{{address}}</p>
+    {{/if}}
+    {{#if phone}}
+		  <a href="tel:{{phone}}"> {{phone}}</a>
+    {{/if}}
+    {{#if fax}}
+      <a href="tel:{{fax}}"> {{fax}}</a>
+		{{/if}}
+    {{#if email}}
+      <a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
+    {{/if}}
+    {{#if website}}
+		  <a href="{{website}}" target="_blank" class="blue_link">{{website}}</a>
+		{{/if}}
+    {{#if vcard_url}}
+      <a href="{{vcard_url}}" target="_blank" class="vcard">VCARD</a>
+	  {{/if}}
   </div>
 
 	<div class="column_2">
@@ -24,9 +36,11 @@
 				<li>{{this}}</li>
 			{{/each}}
 		</ul>
-    <div class="business_flyout_description">
-      <h3> Description </h3>
-      <p>{{desc}}</p>
-    </div>
+    {{#if desc}}
+		  <div class="business_flyout_description">
+			  <h3> Description </h3>
+			  <p>{{desc}}</p>
+		  </div>
+    {{/if}}
 	</div>
 </div>
