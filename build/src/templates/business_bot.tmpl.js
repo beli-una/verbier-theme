@@ -10,6 +10,13 @@
 
 	<div class="column_1">
 		<p>{{address}}</p>
+    <h1>TEST :: {{phone.length}}</h1>
+    {{#if phone.length}}
+      <h1>Made it in here</h1>
+    {{else}}
+      <h1>Hit the else</h1>
+    {{/if}}
+
 		<a href="tel:{{phone}}"> {{phone}}</a>
 		<a href="tel:{{fax}}"> {{fax}}</a>
 		<a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
