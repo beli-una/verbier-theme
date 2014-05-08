@@ -6,6 +6,7 @@
     <div class="article_container_small_text">
         <h1>{{name}}</h1>
         <h2>{{start_date}}</h2>
+        <p>{{address}}</p>
         <p>{{desc}}</p>
     </div>
    	<div id="travel_book_ribbon">
