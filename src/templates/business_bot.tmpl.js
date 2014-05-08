@@ -35,6 +35,9 @@
 			{{#each opening_period}}
 				<li>{{this}}</li>
 			{{/each}}
+			{{#each opening_hours}}
+				<li>{{this}}</li>
+			{{/each}}
 		</ul>
     {{#if desc}}
 		  <div class="business_flyout_description">
