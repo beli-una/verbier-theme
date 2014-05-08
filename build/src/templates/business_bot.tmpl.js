@@ -9,22 +9,24 @@
 	</div>
 
 	<div class="column_1">
-		<p>{{address}}</p>
-    {{#unless phone.length}}
+  	{{#if address}}
+      <p>{{address}}</p>
+    {{/if}}
+    {{#if phone}}
 		  <a href="tel:{{phone}}"> {{phone}}</a>
-    {{/unless}}
-    {{#unless fax.length}}
+    {{/if}}
+    {{#if fax}}
       <a href="tel:{{fax}}"> {{fax}}</a>
-		{{/unless}}
-    {{#unless email.length}}
+		{{/if}}
+    {{#if email}}
       <a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
-    {{/unless}}
-    {{#unless website.length}}
+    {{/if}}
+    {{#if website}}
 		  <a href="{{website}}" target="_blank" class="blue_link">{{website}}</a>
-		{{/unless}}
-    {{#unless vcard_url.length}}
+		{{/if}}
+    {{#if vcard_url}}
       <a href="{{vcard_url}}" target="_blank" class="vcard">VCARD</a>
-	  {{/unless}}
+	  {{/if}}
   </div>
 
 	<div class="column_2">
@@ -34,11 +36,11 @@
 				<li>{{this}}</li>
 			{{/each}}
 		</ul>
-    {{#unless desc.length}}
+    {{#if desc}}
 		  <div class="business_flyout_description">
 			  <h3> Description </h3>
 			  <p>{{desc}}</p>
 		  </div>
-    {{/unless}}
+    {{/if}}
 	</div>
 </div>
