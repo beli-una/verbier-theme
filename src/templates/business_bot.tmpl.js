@@ -10,19 +10,22 @@
 
 	<div class="column_1">
 		<p>{{address}}</p>
-    <h1>TEST :: {{phone.length}}</h1>
-    {{#if phone.length}}
-      <h1>Made it in here</h1>
-    {{else}}
-      <h1>Hit the else</h1>
-    {{/if}}
-
-		<a href="tel:{{phone}}"> {{phone}}</a>
-		<a href="tel:{{fax}}"> {{fax}}</a>
-		<a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
-		<a href="{{website}}" target="_blank" class="blue_link">{{website}}</a>
-		<a href="{{vcard_url}}" target="_blank" class="vcard">VCARD</a>
-	</div>
+    {{#unless phone.length}}
+		  <a href="tel:{{phone}}"> {{phone}}</a>
+    {{/unless}}
+    {{#unless fax.length}}
+      <a href="tel:{{fax}}"> {{fax}}</a>
+		{{/unless}}
+    {{#unless email.length}}
+      <a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
+    {{/unless}}
+    {{#unless website.length}}
+		  <a href="{{website}}" target="_blank" class="blue_link">{{website}}</a>
+		{{/unless}}
+    {{#unless vcard_url.length}}
+      <a href="{{vcard_url}}" target="_blank" class="vcard">VCARD</a>
+	  {{/unless}}
+  </div>
 
 	<div class="column_2">
 		<ul class="opening" >
@@ -31,9 +34,11 @@
 				<li>{{this}}</li>
 			{{/each}}
 		</ul>
-		<div class="business_flyout_description">
-			<h3> Description </h3>
-			<p>{{desc}}</p>
-		</div>
+    {{#unless desc.length}}
+		  <div class="business_flyout_description">
+			  <h3> Description </h3>
+			  <p>{{desc}}</p>
+		  </div>
+    {{/unless}}
 	</div>
 </div>
