@@ -5,7 +5,9 @@
     </div>
     <div class="article_container_small_text">
         <h1>{{name}}</h1>
-        <h2>{{start_date}}</h2>
+        {{#each opening_period}}
+          <h2>{{this}}</h2>
+        {{/each}}
         <p>{{address}}</p>
         <p>{{desc}}</p>
     </div>
