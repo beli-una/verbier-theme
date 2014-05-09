@@ -170,9 +170,7 @@ function initAutoLoad(targetClass, template, callBackMethod) {
 }
 
 function initListingPageAnimations() {
-    $elMainSection = $(".main_section"), $elMainSection.addClass("animate"), $elMainSection.parent().one("transitionend", function() {
-        $(".main_section").height($(document).height() - 400);
-    });
+    $elMainSection = $(".main_section"), $elMainSection.addClass("animate"), $elMainSection.parent().one("transitionend", function() {});
 }
 
 function listTravelBook() {

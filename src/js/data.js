@@ -326,7 +326,7 @@ function initListingPageAnimations() {
 	  $elMainSection = $('.main_section');
 	  $elMainSection.addClass('animate');
 	  $elMainSection.parent().one( 'transitionend', function() {
-		$(".main_section").height($(document).height() - 400);
+		// $(".main_section").height($(document).height() - 400);
 	  });
 }
 

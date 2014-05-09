@@ -282,7 +282,7 @@ $(document).ajaxComplete(function() {
             right: "-200px"
         });
     });
-    $(".main_section").height($(document).height());
+    // $(".main_section").height($(document).height());
     switch (page_checker()) {
         case 'home_page':
             $('.article_container_small_text p').trunc(150, true);

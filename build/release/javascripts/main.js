@@ -115,7 +115,7 @@ $(document).ready(function() {
         e.stopImmediatePropagation(), $(this).find(".info-text p").stop(!0, !0).animate({
             right: "-200px"
         });
-    }), $(".main_section").height($(document).height()), page_checker()) {
+    }), page_checker()) {
       case "home_page":
         $(".article_container_small_text p").trunc(150, !0);
     }
