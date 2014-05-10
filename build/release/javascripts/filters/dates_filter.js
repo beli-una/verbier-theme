@@ -2,7 +2,7 @@ $(document).ready(function() {
     var dp_dates = [];
     $(".datepicker").datepicker({
         inline: !0,
-        dayNamesMin: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
+        dayNamesMin: translation_helper("date_names", "translate_dates"),
         dateFormat: "yy-mm-dd",
         beforeShowDay: function(date) {
             return dp_dates[0] && date.getTime() == dp_dates[0].getTime() ? [ !0, "dp-start-highlight" ] : dp_dates[1] && date.getTime() == dp_dates[1].getTime() ? [ !0, "dp-start-highlight" ] : [ !0, dp_dates[0] && (date.getTime() == dp_dates[0].getTime() || dp_dates[1] && date >= dp_dates[0] && date <= dp_dates[1]) ? "dp-highlight" : "" ];

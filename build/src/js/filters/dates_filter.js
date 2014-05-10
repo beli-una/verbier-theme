@@ -5,7 +5,7 @@ $( document ).ready(function( e ){
     $( '.datepicker' ).datepicker({
         
         inline: true,
-        dayNamesMin: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+        dayNamesMin: translation_helper("date_names","translate_dates"),
         dateFormat: 'yy-mm-dd',
         
         beforeShowDay: function( date ) {
@@ -71,7 +71,7 @@ $( document ).ready(function( e ){
         if( dp_dates.length === 2 ){
             
             var val = jQuery.map(dp_dates, function(n) {
-				  
+                  
                 return  n.toLocaleDateString();
             });
             
