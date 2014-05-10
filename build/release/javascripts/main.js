@@ -46,7 +46,7 @@ function documentReadyHandler() {
                 village: $(".filters").data("village")
             }
         }), $(".ul").hasClass("current_only") && (custome_filter = current_time_filter()), 
-        "" !== filters ? $("#uw_accommodations_dropdown_1").children().each(function(i, v) {
+        "" !== filters ? ($("#uw_accommodations_dropdown_1").children().each(function(i, v) {
             if ("undefined" != typeof $(v).data("value") && $(v).data("value").toUpperCase() === filters.village.toUpperCase()) {
                 $("#uw_accommodations_dropdown_1 li:first-child").text($(v).text());
                 var val = $(v).data("value"), txt = $(v).text();
@@ -55,7 +55,7 @@ function documentReadyHandler() {
                     village: val
                 }), vdm.getData([ "business.tmpl.js", "business_bot.tmpl.js" ], ".accomidations", custome_filter, businessDataHandler);
             }
-        }) : vdm.getData([ "business.tmpl.js", "business_bot.tmpl.js" ], ".accomidations", custome_filter, businessDataHandler), 
+        }), 0 === $("#uw_accommodations_dropdown_1").children().length && vdm.getData([ "business.tmpl.js", "business_bot.tmpl.js" ], ".accomidations", custome_filter, businessDataHandler)) : vdm.getData([ "business.tmpl.js", "business_bot.tmpl.js" ], ".accomidations", custome_filter, businessDataHandler), 
         initAutoLoad(".accomidations", [ "business.tmpl.js", "business_bot.tmpl.js" ], paginationBusinessCallBack);
         break;
 

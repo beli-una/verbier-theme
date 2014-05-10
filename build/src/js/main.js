@@ -21,7 +21,7 @@ $(document).ready(function(e) {
     $(".btn_weather span").css("lineHeight", "16px");
     $(".btn_weather span img").css("margin", "0 auto");
     Handlebars.registerHelper('translate', translation_helper);
-    //  initListingFilterRemoval();
+
     documentReadyHandler();
     initWeatherSlideOut();
 
@@ -86,7 +86,7 @@ function documentReadyHandler() {
             initSlideshow('.uw_listing_slideshow');
 
             initListingFilterRemoval();
-            //vdm.getData('hotels.tmpl.js' , '.accomidations', AJAX_DATA, DataHandler);
+
             initAutoLoad(".accomidations", "hotels.tmpl.js");
 
             if (filters !== "") {
@@ -156,14 +156,14 @@ function documentReadyHandler() {
                                 village: val
                             });
 
-                            //vdm.getData( 'hotels.tmpl.js', '.accomidations', AJAX_DATA, basicDataHandler);
                             vdm.getData(['business.tmpl.js', 'business_bot.tmpl.js'], '.accomidations', custome_filter, businessDataHandler);
                         }
                     }
-
                 });
+                if($("#uw_accommodations_dropdown_1").children().length ===0 ){
+                        vdm.getData(['business.tmpl.js', 'business_bot.tmpl.js'], '.accomidations', custome_filter, businessDataHandler);
+                }
             } else {
-                //vdm.getData('hotels.tmpl.js' , '.accomidations', AJAX_DATA, basicDataHandler);// Accommodations data
                 vdm.getData(['business.tmpl.js', 'business_bot.tmpl.js'], '.accomidations', custome_filter, businessDataHandler);
             }
 
