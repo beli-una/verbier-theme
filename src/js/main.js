@@ -4,6 +4,10 @@ var vdm = new VerbierDataManager(); // Verbier data manager
  * DOCUMENT READY
  */
 
+function translation_helper(translation_item, translation_object){
+    var translation = window[translation_object];
+    return translation[translation_item];
+}
 
 $(document).ready(function(e) {
 
@@ -16,7 +20,7 @@ $(document).ready(function(e) {
     $(".btn_weather span").css("padding", "0");
     $(".btn_weather span").css("lineHeight", "16px");
     $(".btn_weather span img").css("margin", "0 auto");
-
+    Handlebars.registerHelper('translate', translation_helper);
     //  initListingFilterRemoval();
     documentReadyHandler();
     initWeatherSlideOut();

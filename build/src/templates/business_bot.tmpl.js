@@ -9,38 +9,38 @@
 	</div>
 
 	<div class="column_1">
-  	{{#if address}}
-      <p>{{address}}</p>
-    {{/if}}
-    {{#if phone}}
+	{{#if address}}
+	  <p>{{address}}</p>
+	{{/if}}
+	{{#if phone}}
 		  <a href="tel:{{phone}}"> {{phone}}</a>
-    {{/if}}
-    {{#if fax}}
-      <a href="tel:{{fax}}"> {{fax}}</a>
+	{{/if}}
+	{{#if fax}}
+	  <a href="tel:{{fax}}"> {{fax}}</a>
 		{{/if}}
-    {{#if email}}
-      <a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
-    {{/if}}
-    {{#if website}}
+	{{#if email}}
+	  <a href="mailto:{{email}}" target="_blank" class="blue_link">{{email}}</a>
+	{{/if}}
+	{{#if website}}
 		  <a href="{{website}}" target="_blank" class="blue_link">{{website}}</a>
 		{{/if}}
-    {{#if vcard_url}}
-      <a href="{{vcard_url}}" target="_blank" class="vcard">VCARD</a>
+	{{#if vcard_url}}
+	  <a href="{{vcard_url}}" target="_blank" class="vcard">{{translate "vcard" "translation_templates"}} </a>
 	  {{/if}}
   </div>
 
 	<div class="column_2">
 		<ul class="opening" >
-			<h3> Opening Period </h3>
+			<h3> {{translate "opening_period" "translation_templates"}} </h3>
 			{{#each opening_period}}
 				<li>{{this}}</li>
 			{{/each}}
 		</ul>
-    {{#if desc}}
+	{{#if desc}}
 		  <div class="business_flyout_description">
-			  <h3> Description </h3>
+			  <h3> {{translate "description" "translation_templates"}} </h3>
 			  <p>{{desc}}</p>
 		  </div>
-    {{/if}}
+	{{/if}}
 	</div>
 </div>

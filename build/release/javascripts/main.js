@@ -1,3 +1,8 @@
+function translation_helper(translation_item, translation_object) {
+    var translation = window[translation_object];
+    return translation[translation_item];
+}
+
 function documentReadyHandler() {
     switch (vdm = new VerbierDataManager(), page_checker()) {
       case "home_page":
@@ -94,8 +99,8 @@ $(document).ready(function() {
     var weather_data = $(".uw_meo_weather_past"), text_status = weather_data.data("temp_morn") + "°C " + weather_data.data("temp_aft") + "°C ", icon_path = '<img src="' + unroole.theme_absolute_path + "/media_assets/images/weather_icons_nav/" + weather_data.data("symb_day") + '.png" >', weatherHtml = icon_path + text_status;
     $(".btn_weather span").html(weatherHtml), $(".btn_weather span").css("background", "none"), 
     $(".btn_weather span").css("padding", "0"), $(".btn_weather span").css("lineHeight", "16px"), 
-    $(".btn_weather span img").css("margin", "0 auto"), documentReadyHandler(), initWeatherSlideOut(), 
-    $.each($(".main_menu li"), function(index, value) {
+    $(".btn_weather span img").css("margin", "0 auto"), Handlebars.registerHelper("translate", translation_helper), 
+    documentReadyHandler(), initWeatherSlideOut(), $.each($(".main_menu li"), function(index, value) {
         if ($(this).hasClass("current")) return !1;
         var id = window.location.pathname.split("/")[1];
         $(value).hasClass(id + "_sidebar") && $(this).addClass("selected");

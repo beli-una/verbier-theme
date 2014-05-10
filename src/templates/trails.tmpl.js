@@ -7,11 +7,11 @@
 	<h2>{{village}}</h2>
 	<h3 class="upper">{{duratin}}</h3>
 	<h3>{{difficulty}}</h3>
-   	<div id="travel_book_ribbon">
+	<div id="travel_book_ribbon">
 		<div class="my_travel_book_icon" onclick="addTravelBook(this)" data-item="{{json}}">
 			<div class="info-text">
-				<p class="selected">Add to My Travel Book</p>
-				<p>Remove from My Travel Book</p>
+				<p class="selected">{{translate "add_travel_book" "translation_templates"}} </p>
+				<p>{{translate "remove_travel_book" "translation_templates"}}</p>
 			</div>
 		</div>
 	</div>
