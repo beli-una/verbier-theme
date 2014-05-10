@@ -124,4 +124,9 @@ $(document).ready(function() {
       case "home_page":
         $(".article_container_small_text p").trunc(150, !0);
     }
+    $("a.article_small_img_link").hover(function() {
+        $(this).css("background", "url(" + translation_helper("hover_image", "translation_templates") + ")");
+    }, function() {
+        $(this).css("background", "");
+    });
 });

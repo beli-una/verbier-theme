@@ -25,7 +25,6 @@ $(document).ready(function(e) {
     documentReadyHandler();
     initWeatherSlideOut();
 
-
     $.each($('.main_menu li'), function(index, value) {
         if ($(this).hasClass('current')) {
             return false;
@@ -292,4 +291,9 @@ $(document).ajaxComplete(function() {
             $('.article_container_small_text p').trunc(150, true);
             break;
     }
+    $("a.article_small_img_link").hover(function(){
+        $(this).css("background", "url(" + translation_helper('hover_image','translation_templates') + ")");
+    },function(){
+        $(this).css("background","");
+    });
 });
