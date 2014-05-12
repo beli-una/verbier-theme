@@ -6,6 +6,7 @@ $( document ).ready(function( e ){
         
         inline: true,
         dayNamesMin: translation_helper("date_names","translate_dates"),
+        monthNames: translation_helper("date_month","translate_dates"),
         dateFormat: 'yy-mm-dd',
         
         beforeShowDay: function( date ) {
