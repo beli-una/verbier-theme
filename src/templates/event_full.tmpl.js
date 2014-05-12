@@ -8,13 +8,13 @@
 		<p>{{desc}}</p>
 	</div>
   <div>
-    <div class="column_0">
-      <div class="business_map_canvas" data-lat="{{coords.[0]}}" data-lng="{{coords.[1]}}">
+    <div class="event_map">
+      <div class="event_map_canvas" data-lat="{{coords.[0]}}" data-lng="{{coords.[1]}}">
       <img src="http://maps.googleapis.com/maps/api/staticmap?center={{coords.[0]}},{{coords.[1]}}&zoom=15&sensor=true&markers=color:red%7C{{coords.[0]}},{{coords.[1]}}&size=380x320&key=AIzaSyA92nN0Kua54tvMskt_1bn_48nqE4PLNbY">
       </div>
     </div>
 
-    <div class="column_1">
+    <div class="event_additional_details">
       {{#if address}}
         <p>{{address}}</p>
       {{/if}}
