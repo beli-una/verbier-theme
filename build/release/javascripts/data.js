@@ -54,19 +54,10 @@ function businessDataHandler(templateName, listWidgetClass, data) {
 }
 
 function eventsDataHandler(templateName, listWidgetClass, data) {
-    function getMonthFromString(mon) {
-        var d = Date.parse(mon + "1, 2012");
-        return isNaN(d) ? -1 : new Date(d).getMonth() + 1;
-    }
     $.each(data.items, function(i, item) {
         $(".event_sum_container").append(Handlebars.templates[templateName[0]](item)), $(".event_full_container").append(Handlebars.templates[templateName[1]](item));
     }), $(".event_sum p").trunc(300, !0), $(".event_sum").first().addClass("active"), 
-    $(".event_full").first().show(), $(".event_sum").each(function() {
-        var day = $(this).find("h2").html().substring(0, 2), year = $(this).find("h2").html().substring(8, 14), month = $(this).find("h2").html().substring(3, 6), monthNum = getMonthFromString(month);
-        9 >= monthNum && (monthNum = "0" + monthNum);
-        var date = day + "." + monthNum + "." + year;
-        $(this).find("h2").html(date);
-    }), $(".event_sum").click(function() {
+    $(".event_full").first().show(), $(".event_sum").each(function() {}), $(".event_sum").click(function() {
         $(".event_sum").removeClass("active"), $(this).addClass("active"), evntID = $(this).data("id"), 
         $(".event_full").hide(), $("." + evntID).show(), scroll(".event_full_container", "body,html,document", 100);
     });

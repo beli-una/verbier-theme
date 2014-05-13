@@ -124,15 +124,15 @@ function eventsDataHandler( templateName, listWidgetClass, data ){
 	$(".event_sum").first().addClass("active");
 	$(".event_full").first().show();
 	$(".event_sum").each(function(){
-		var day = $(this).find("h2").html().substring(0,2);
-		var year = $(this).find("h2").html().substring(8,14);
-		var month = $(this).find("h2").html().substring(3,6);
-		var monthNum = getMonthFromString(month);
-		if(monthNum <= 9){
-			monthNum = "0"+monthNum;
-		}
-		var date = day + "." + monthNum + "." + year;
-		$(this).find("h2").html(date);
+		// var day = $(this).find("h2").html().substring(0,2);
+		// var year = $(this).find("h2").html().substring(8,14);
+		// var month = $(this).find("h2").html().substring(3,6);
+		// var monthNum = getMonthFromString(month);
+		// if(monthNum <= 9){
+			// monthNum = "0"+monthNum;
+		// }
+		// var date = day + "." + monthNum + "." + year;
+		// $(this).find("h2").html(date);
 
 	})
 	function getMonthFromString(mon){
