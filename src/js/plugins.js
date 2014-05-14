@@ -53,55 +53,55 @@
 
 function EventDispatcher() {
 
-    this.events = [];
-    this.data = null
+	this.events = [];
+	this.data = null
 }
 
 EventDispatcher.prototype.addEventlistener = function (e, t) {
 
-    this.events[e] = this.events[e] || [];
-    
-    if (this.events[e]) {
-    
-        this.events[e].push(t)
-    }
+	this.events[e] = this.events[e] || [];
+	
+	if (this.events[e]) {
+	
+		this.events[e].push(t)
+	}
 };
 
 EventDispatcher.prototype.removeEventlistener = function (e, t) {
 
-    if (this.events[e]) {
-    
-        var n = this.events[e];
-        
-        for (var r = n.length - 1; r >= 0; --r) {
-        
-            if (n[r] === t) {
-            
-                n.splice(r, 1);
-                return true
-            }
-        }
-    }
-    
-    return false
+	if (this.events[e]) {
+	
+		var n = this.events[e];
+		
+		for (var r = n.length - 1; r >= 0; --r) {
+		
+			if (n[r] === t) {
+			
+				n.splice(r, 1);
+				return true
+			}
+		}
+	}
+	
+	return false
 };
 
 EventDispatcher.prototype.dispatchEvent = function (e, t) {
 
-    this.data = t;
-    
-    if (this.events[e]) {
-    
-        this.events[e].data = this.data;
-        
-        var n = this.events[e];
-        var r = n.length;
-        
-        while (r--) {
-        
-            n[r](this)
-        }
-    }
+	this.data = t;
+	
+	if (this.events[e]) {
+	
+		this.events[e].data = this.data;
+		
+		var n = this.events[e];
+		var r = n.length;
+		
+		while (r--) {
+		
+			n[r](this)
+		}
+	}
 }
 
 
@@ -111,220 +111,220 @@ EventDispatcher.prototype.dispatchEvent = function (e, t) {
 
 ;(function ( $, window, document, undefined ) {
 
-    $.widget( 'unroole.slideshow' , {
+	$.widget( 'unroole.slideshow' , {
 
-        options: {
-            display : [0],
-            left : '.slideshow_prev_item',
-            right : '.slideshow_next_item',
-            timeout : null,
-            pagination : false
-        },
+		options: {
+			display : [0],
+			left : '.slideshow_prev_item',
+			right : '.slideshow_next_item',
+			timeout : null,
+			pagination : false
+		},
 
-        _create: function () {
-            
-            this.initVariables();
-            this.initWidget();
-        },
-        
-        initVariables: function(){
-            
-            // Display
-            this.display = this.options.display;
-    
-            // Slides
-            this.element.find('ol').addClass('slides');
-            this.slides = this.element.find('li');
-            this.slideIndex = 0;
-            this.totalSlides = $( this.slides ).size();
-            
-            // First & last items
-            this.first = this.slides.eq( 0 );
-            this.last = $( this.slides ).eq( $( this.slides ).size() - 1 );
-            
-            // Left & right buttons
-            this.left = this.element.find( this.options.left );
-            this.right = this.element.find( this.options.right );            
-        },
-        
-        initWidget: function(){
-            
-            if( this.options.pagination ){
-            
-                this.initPagination();
-            }
-            
-            this.updateSlides( this.display );
-            this.initButtons();
-        },
-        
-        initButtons: function(){
+		_create: function () {
+			
+			this.initVariables();
+			this.initWidget();
+		},
+		
+		initVariables: function(){
+			
+			// Display
+			this.display = this.options.display;
+	
+			// Slides
+			this.element.find('ol').addClass('slides');
+			this.slides = this.element.find('li');
+			this.slideIndex = 0;
+			this.totalSlides = $( this.slides ).size();
+			
+			// First & last items
+			this.first = this.slides.eq( 0 );
+			this.last = $( this.slides ).eq( $( this.slides ).size() - 1 );
+			
+			// Left & right buttons
+			this.left = this.element.find( this.options.left );
+			this.right = this.element.find( this.options.right );            
+		},
+		
+		initWidget: function(){
+			
+			if( this.options.pagination ){
+			
+				this.initPagination();
+			}
+			
+			this.updateSlides( this.display );
+			this.initButtons();
+		},
+		
+		initButtons: function(){
 			
 			var self = this;
-        
-            init( this, this.left, this.first, -1 );
-            init( this, this.right, this.last, 1 );
-            
-            function init( scp, btn, sld, n ){
+		
+			init( this, this.left, this.first, -1 );
+			init( this, this.right, this.last, 1 );
+			
+			function init( scp, btn, sld, n ){
 				
 				$( btn ).unbind( 'click' );
 				
-                $( btn ).on('click', function( e ){
-            
-                    e.preventDefault();
+				$( btn ).on('click', function( e ){
+			
+					e.preventDefault();
 					
-                    if( sld.css( 'display') === 'none'){
-                        
-                        $.each( scp.display, function( index, value ){
-                            
-                            scp.display[ index ] = scp.formatIndex( value + n, $(scp.slides).size() );
-                        });
-                        
-                        scp.updateSlides( scp.display );
-                    }
+					if( sld.css( 'display') === 'none'){
+						
+						$.each( scp.display, function( index, value ){
+							
+							scp.display[ index ] = scp.formatIndex( value + n, $(scp.slides).size() );
+						});
+						
+						scp.updateSlides( scp.display );
+					}
 					
 					self.element.trigger( ($( e.target ).hasClass('slideshow_next_item')) ? 'SLIDESHOW_NEXT' : 'SLIDESHOW_PREV', scp.display );
-                });
-            }
-        },
-        
-        initPagination: function(){
-            
-            var t = this;
-        
-            var ol = $( '<ol/>');
-            ol.addClass('pagination');
-            
-            for(var i= 0; i < this.slides.length; i++ ){
-             
-                var li = $( '<li/>' );
-                
-                if( i === 0 ){
-                    
-                    li.addClass( 'selected' );// Problem is here
-                }
-                
-                li.html( i );
-                
-                li.on( 'click', function( e ){
-                    
-                    e.preventDefault();
-                    
-                    $(this).siblings().removeClass( 'selected' );
-                    $(this).addClass( 'selected' );
-                    
-                    t.updateSlides([$( this ).index()]);
-                });
-                
-                ol.append( li );
-            }
-            
-            this.element.prepend( ol );
+				});
+			}
+		},
+		
+		initPagination: function(){
+			
+			var t = this;
+		
+			var ol = $( '<ol/>');
+			ol.addClass('pagination');
+			
+			for(var i= 0; i < this.slides.length; i++ ){
+			 
+				var li = $( '<li/>' );
+				
+				if( i === 0 ){
+					
+					li.addClass( 'selected' );// Problem is here
+				}
+				
+				li.html( i );
+				
+				li.on( 'click', function( e ){
+					
+					e.preventDefault();
+					
+					$(this).siblings().removeClass( 'selected' );
+					$(this).addClass( 'selected' );
+					
+					t.updateSlides([$( this ).index()]);
+				});
+				
+				ol.append( li );
+			}
+			
+			this.element.prepend( ol );
 			
 			$('.pagination').wrap('<span></span>');
-            
-            // Pagination Variables
-            this.paginationButtons = this.element.find('.pagination li');
-        },
+			
+			// Pagination Variables
+			this.paginationButtons = this.element.find('.pagination li');
+		},
 
-        play: function( delay ){
-            
-            var t = this;
-            
-            if( delay && ( delay != 0 )){
-                
-                clearTimeout( t.timeout );
-                
-                function timeoutCallback(){
-                    
-                    ( t.last.css('display') != 'none' ) ? t.updateSlides( [0] ) : t.right.trigger('click');
-                    t.timeout = setTimeout( timeoutCallback, delay * 1000 );
-                }
-                
-                t.timeout = setTimeout( timeoutCallback, 5000 );
-            }
-        },
+		play: function( delay ){
+			
+			var t = this;
+			
+			if( delay && ( delay != 0 )){
+				
+				clearTimeout( t.timeout );
+				
+				function timeoutCallback(){
+					
+					( t.last.css('display') != 'none' ) ? t.updateSlides( [0] ) : t.right.trigger('click');
+					t.timeout = setTimeout( timeoutCallback, delay * 1000 );
+				}
+				
+				t.timeout = setTimeout( timeoutCallback, 5000 );
+			}
+		},
 
-        pause: function(){
-        	clearTimeout(this.timeout);
-        },
-        
-        updateSlides: function( d ){
-        
-            // Display
-            this.display = d;
-            
-            // Slides
-            this.slides.hide();
-            this.showSlides();
-            
-            // Buttons
-            this.slideIndex = this.element.find('.slides li.selected').index();
-            
-            ( this.slideIndex === 0 ) ? this.hideButton( this.left ) : this.showButton( this.left );
-            ( this.slideIndex === this.totalSlides - 1 ) ? this.hideButton( this.right ) : this.showButton( this.right );
-            
-            if( this.options.pagination ){
-                
-                // Pagination
-                this.paginationButtons.removeClass('selected');
-                this.paginationButtons.eq( this.slideIndex ).addClass('selected');
-            }
-        },
-        
-        showSlides: function() {
-            
-            var t = this;
-            
-            t.slides.removeClass('selected');
-            
-            $.each( this.display, function( index, value ){
-            
-                t.slides.eq( value ).addClass('selected');
-                t.slides.eq( value ).show();
-            });
-        },
-        
-        formatIndex: function ( index, total ) {
-            
-            var i = index;
-            var t = total - 1;
-            
-            if( i < 0 ){
-                
-                i = t;
-            
-            }else if( i > t ){
-                
-                i = 0;
-            }
-            
-            return i;
-        },
-        
-        showButton: function ( t ) { $( t ).fadeTo( 0, 1.0 ).css( 'cursor', 'pointer' ); },
-        hideButton: function ( t ) { $( t ).fadeTo( 0, 0.5 ).css( 'cursor', 'default' ); },
-        destroy: function () {$.Widget.prototype.destroy.call(this);},
-        
-        // Respond to any changes the user makes to the
-        // option method
-        _setOption: function ( key, value ) {
-            switch (key) {
-            case "someValue":
-                //this.options.someValue = doSomethingWith( value );
-                break;
-            default:
-                //this.options[ key ] = value;
-                break;
-            }
+		pause: function(){
+			clearTimeout(this.timeout);
+		},
+		
+		updateSlides: function( d ){
+		
+			// Display
+			this.display = d;
+			
+			// Slides
+			this.slides.hide();
+			this.showSlides();
+			
+			// Buttons
+			this.slideIndex = this.element.find('.slides li.selected').index();
+			
+			( this.slideIndex === 0 ) ? this.hideButton( this.left ) : this.showButton( this.left );
+			( this.slideIndex === this.totalSlides - 1 ) ? this.hideButton( this.right ) : this.showButton( this.right );
+			
+			if( this.options.pagination ){
+				
+				// Pagination
+				this.paginationButtons.removeClass('selected');
+				this.paginationButtons.eq( this.slideIndex ).addClass('selected');
+			}
+		},
+		
+		showSlides: function() {
+			
+			var t = this;
+			
+			t.slides.removeClass('selected');
+			
+			$.each( this.display, function( index, value ){
+			
+				t.slides.eq( value ).addClass('selected');
+				t.slides.eq( value ).show();
+			});
+		},
+		
+		formatIndex: function ( index, total ) {
+			
+			var i = index;
+			var t = total - 1;
+			
+			if( i < 0 ){
+				
+				i = t;
+			
+			}else if( i > t ){
+				
+				i = 0;
+			}
+			
+			return i;
+		},
+		
+		showButton: function ( t ) { $( t ).fadeTo( 0, 1.0 ).css( 'cursor', 'pointer' ); },
+		hideButton: function ( t ) { $( t ).fadeTo( 0, 0.5 ).css( 'cursor', 'default' ); },
+		destroy: function () {$.Widget.prototype.destroy.call(this);},
+		
+		// Respond to any changes the user makes to the
+		// option method
+		_setOption: function ( key, value ) {
+			switch (key) {
+			case "someValue":
+				//this.options.someValue = doSomethingWith( value );
+				break;
+			default:
+				//this.options[ key ] = value;
+				break;
+			}
 
-            // For UI 1.8, _setOption must be manually invoked
-            // from the base widget
-            $.Widget.prototype._setOption.apply( this, arguments );
-            // For UI 1.9 the _super method can be used instead
-            // this._super( "_setOption", key, value );
-        }
-    });
+			// For UI 1.8, _setOption must be manually invoked
+			// from the base widget
+			$.Widget.prototype._setOption.apply( this, arguments );
+			// For UI 1.9 the _super method can be used instead
+			// this._super( "_setOption", key, value );
+		}
+	});
 
 })( jQuery, window, document );
 
@@ -334,20 +334,20 @@ EventDispatcher.prototype.dispatchEvent = function (e, t) {
 
 ;(function($) {
 
-    $.verbierFilter = function(el, options) {
+	$.verbierFilter = function(el, options) {
 
-        var defaults = {
+		var defaults = {
 			submit: null
 		}
 		
-        var plugin = this;
-        plugin.settings = {};
+		var plugin = this;
+		plugin.settings = {};
 		plugin.tracking = {};
 
-        var init = function() {
+		var init = function() {
 			
-            plugin.settings = $.extend({}, defaults, options);
-            plugin.el = el;
+			plugin.settings = $.extend({}, defaults, options);
+			plugin.el = el;
 			plugin.selectable = options.selectable;
 			
 			el.find('.uw_html').hide();
@@ -363,7 +363,7 @@ EventDispatcher.prototype.dispatchEvent = function (e, t) {
 				
 				el.find('li').on('click', options.click );
 			}
-        }
+		}
 		
 		/**
 		 * Hide & show
@@ -424,31 +424,31 @@ EventDispatcher.prototype.dispatchEvent = function (e, t) {
 			return list;
 		}
 
-        init();
-    }
+		init();
+	}
 
 })(jQuery);
 
 ;(function($) {
 
-    $.verbierFilterTag = function(el, options) {
+	$.verbierFilterTag = function(el, options) {
 
-        var defaults = {
-            display: '',
+		var defaults = {
+			display: '',
 			value: '',
 			defaultClass: '',
-            customClass: '',
+			customClass: '',
 			click: null
-        }
+		}
 
-        var plugin = this;
+		var plugin = this;
 
-        plugin.settings = {}
+		plugin.settings = {}
 
-        var init = function() {
+		var init = function() {
 			
-            plugin.settings = $.extend({}, defaults, options);
-            plugin.el = el;
+			plugin.settings = $.extend({}, defaults, options);
+			plugin.el = el;
 			plugin.display = options.display;
 			plugin.value = options.value;
 			plugin.defaultClass = options.defaultClass;
@@ -458,14 +458,14 @@ EventDispatcher.prototype.dispatchEvent = function (e, t) {
 			plugin.el.append( $('<span/>').append( plugin.display ) ).append( $('<span/>').append('X').addClass('close') ).addClass(plugin.defaultClass).addClass( plugin.customClass );
 			plugin.el.attr( 'data-value', plugin.value );
 			plugin.el.on('click', plugin.click);
-        }
+		}
 
-        //plugin.foo_public_method = function() {}
+		//plugin.foo_public_method = function() {}
 		//var foo_private_method = function() {}
 
-        init();
+		init();
 
-    }
+	}
 
 })(jQuery);
 
@@ -488,8 +488,8 @@ var AJAX_DATA = { 'filter' : {}, 'display' : {} };
 */
 
 function VerbierDataManager() {
-    
-    EventDispatcher.call( this );
+	
+	EventDispatcher.call( this );
 }
 
 VerbierDataManager.prototype = new EventDispatcher;
@@ -501,21 +501,21 @@ VerbierDataManager.prototype.constructor = VerbierDataManager;
 
 VerbierDataManager.prototype.getData = function( templateName, listWidgetClass, filterObj, successFunc ){
 	
-    if( filterObj === null ) filterObj = {filter:{}};
-    
+	if( filterObj === null ) filterObj = {filter:{}};
+	
 	var self = this;
-    var uri = $( listWidgetClass ).data( 'uri' );
+	var uri = $( listWidgetClass ).data( 'uri' );
 	var results = $(".results")[0];
 	
 	$(results).css('background-image', 'url(' + unroole.theme_absolute_path + '/media_assets/images/status.gif)').css('background-repeat','no-repeat').css('background-position','center');
 	$(results).css('color', 'transparent').css('line-heigh', '0');
 	
-    AJAX_REQUEST = $.ajax( uri, {
-    
-        dataType: 'JSON',
-        data: filterObj,
-        
-        success: function ( data, textStatus, jqXHR ){
+	AJAX_REQUEST = $.ajax( uri, {
+	
+		dataType: 'JSON',
+		data: filterObj,
+		
+		success: function ( data, textStatus, jqXHR ){
 			
 			// Clear the filters div
 			$('.accommodations_results .filters').empty();
@@ -532,7 +532,7 @@ VerbierDataManager.prototype.getData = function( templateName, listWidgetClass, 
 					
 				var cTag = new $.verbierFilterTag($('<div/>'), {
 					
-					display: 'clear all',
+					display: translation_helper("clear_all","translation_templates"),
 					value: '',
 					defaultClass: 'additive-filter-clear',
 					customClass: '',
@@ -540,7 +540,7 @@ VerbierDataManager.prototype.getData = function( templateName, listWidgetClass, 
 					click: function(e){
 					
 						e.preventDefault();	
-                    	self.deleteAllFilters();
+						self.deleteAllFilters();
 					}
 				});
 				
@@ -563,11 +563,11 @@ VerbierDataManager.prototype.getData = function( templateName, listWidgetClass, 
 								
 								if( item === 1 ){
 								
-									matchText = item + ' Star';
+									matchText = item + ' ' + translation_helper("star","translation_templates");
 								
 								}else{
 								
-									matchText = item + ' Stars';
+									matchText = item + ' ' + translation_helper("stars","translation_templates");
 								}
 								
 								matchValue = item;
@@ -642,10 +642,10 @@ VerbierDataManager.prototype.getData = function( templateName, listWidgetClass, 
 			}
 
 			successFunc( templateName, listWidgetClass, data );
-        },
-        
-        error: function(jqXHR, textStatus, errorThrown) {}
-    });
+		},
+		
+		error: function(jqXHR, textStatus, errorThrown) {}
+	});
 }
 
 VerbierDataManager.prototype.setFilter = function( index, value ){AJAX_DATA.filter[ index ] = value;}
@@ -690,7 +690,7 @@ VerbierDataManager.prototype.deleteFilter = function( index, item ){
 
 VerbierDataManager.prototype.deleteAllFilters = function(){
 	
-    $.each(AJAX_DATA.filter, function( index, value ){
+	$.each(AJAX_DATA.filter, function( index, value ){
 		
 		delete AJAX_DATA.filter[ index ];
 	});
@@ -698,31 +698,31 @@ VerbierDataManager.prototype.deleteAllFilters = function(){
 	$("#uw_accommodations_dropdown_1 li:first-child").text("VILLAGES");
 	amFilter.untrackAll();
 	Session.clear();
-    this.dispatchEvent('DELETE_ALL_FILTERS', null );
+	this.dispatchEvent('DELETE_ALL_FILTERS', null );
 }
 
 VerbierDataManager.prototype.getFiltersTotal = function(){
-    
-    var i = 0;
-    $.each(AJAX_DATA.filter, function ( index, value ) {i++;});
-    return i;
+	
+	var i = 0;
+	$.each(AJAX_DATA.filter, function ( index, value ) {i++;});
+	return i;
 }
 
 function isDuplicate( txtA ){
-    
-    var bool = false;
-    
-    $.each( $('.additive-filter'), function( index, value ){
-        
-        var txtB = $( value ).find('span:first-child').text();
-    
-        if(txtA === txtB){
-        
-            bool = true;
-        }
-    });
-    
-    return bool;
+	
+	var bool = false;
+	
+	$.each( $('.additive-filter'), function( index, value ){
+		
+		var txtB = $( value ).find('span:first-child').text();
+	
+		if(txtA === txtB){
+		
+			bool = true;
+		}
+	});
+	
+	return bool;
 }
 
 /*

@@ -268,7 +268,7 @@ VerbierDataManager.prototype.getData = function(templateName, listWidgetClass, f
             if ($(results).css("background-image", "none").css("line-height", "13px").css("color", "rgb(163, 163, 163)"), 
             $(".accommodations_results .results span").text(data.number_of_results), len > 0) {
                 var cTag = new $.verbierFilterTag($("<div/>"), {
-                    display: "clear all",
+                    display: translation_helper("clear_all", "translation_templates"),
                     value: "",
                     defaultClass: "additive-filter-clear",
                     customClass: "",
@@ -283,7 +283,8 @@ VerbierDataManager.prototype.getData = function(templateName, listWidgetClass, f
                         var matchText, matchValue;
                         switch (categories) {
                           case "rating":
-                            matchText = 1 === item ? item + " Star" : item + " Stars", matchValue = item;
+                            matchText = 1 === item ? item + " " + translation_helper("star", "translation_templates") : item + " " + translation_helper("stars", "translation_templates"), 
+                            matchValue = item;
                             break;
 
                           case "rate_range":
