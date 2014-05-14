@@ -667,11 +667,13 @@ VerbierDataManager.prototype.deleteFilter = function( index, item ){
 	for(categories in AJAX_DATA.filter){	
 		len += $.map(AJAX_DATA.filter[categories], function(n, i) { return i; }).length;
 	}
+	if (amFilter){
+		amFilter.untrack(removeItem);
+	}
 	
-	amFilter.untrack(removeItem);
 	$("*[data-value='" + removeItem + "']").removeClass("selected");
 	
-	if(Object.keys(amFilter.tracking).length < 1){
+	if(amFilter && Object.keys(amFilter.tracking).length < 1){
 		this.dispatchEvent('DELETE_ALL_FILTERS', null );
 	}
 	
@@ -683,8 +685,9 @@ VerbierDataManager.prototype.deleteFilter = function( index, item ){
 	} else {
 		
 		this.dispatchEvent('DELETE_FILTER', { item: item });
-		
-		amFilter.untrack( $(item).data('value') );
+		if (amFilter){
+			amFilter.untrack( $(item).data('value') );
+		}
 	}
 }
 
@@ -696,7 +699,9 @@ VerbierDataManager.prototype.deleteAllFilters = function(){
 	});
 	
 	$("#uw_accommodations_dropdown_1 li:first-child").text("VILLAGES");
-	amFilter.untrackAll();
+	if(amFilter){
+		amFilter.untrackAll();
+	}
 	Session.clear();
 	this.dispatchEvent('DELETE_ALL_FILTERS', null );
 }

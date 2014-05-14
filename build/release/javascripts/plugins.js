@@ -336,15 +336,15 @@ VerbierDataManager.prototype.getData = function(templateName, listWidgetClass, f
     for (categories in AJAX_DATA.filter) len += $.map(AJAX_DATA.filter[categories], function(n, i) {
         return i;
     }).length;
-    amFilter.untrack(removeItem), $("*[data-value='" + removeItem + "']").removeClass("selected"), 
-    Object.keys(amFilter.tracking).length < 1 && this.dispatchEvent("DELETE_ALL_FILTERS", null), 
+    amFilter && amFilter.untrack(removeItem), $("*[data-value='" + removeItem + "']").removeClass("selected"), 
+    amFilter && Object.keys(amFilter.tracking).length < 1 && this.dispatchEvent("DELETE_ALL_FILTERS", null), 
     0 == len ? this.dispatchEvent("DELETE_ALL_FILTERS", null) : (this.dispatchEvent("DELETE_FILTER", {
         item: item
-    }), amFilter.untrack($(item).data("value")));
+    }), amFilter && amFilter.untrack($(item).data("value")));
 }, VerbierDataManager.prototype.deleteAllFilters = function() {
     $.each(AJAX_DATA.filter, function(index) {
         delete AJAX_DATA.filter[index];
-    }), $("#uw_accommodations_dropdown_1 li:first-child").text("VILLAGES"), amFilter.untrackAll(), 
+    }), $("#uw_accommodations_dropdown_1 li:first-child").text("VILLAGES"), amFilter && amFilter.untrackAll(), 
     Session.clear(), this.dispatchEvent("DELETE_ALL_FILTERS", null);
 }, VerbierDataManager.prototype.getFiltersTotal = function() {
     var i = 0;
