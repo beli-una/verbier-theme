@@ -12,7 +12,7 @@ $( document ).ready(function( e ){
 		var dataType = getDataType( $(this) );
 		var id = 'uw_accommodations_dropdown_' + index;
 		
-        $(value).attr( 'id', id );
+		$(value).attr( 'id', id );
 		
 		var filter = new $.verbierFilter($( '#' + id ), {
 		
@@ -66,9 +66,14 @@ $( document ).ready(function( e ){
 						AJAX_DATA.display[ dataType ] = [txt];
 
 						Session.set('filter', {village: val});
-						
-						vdm.getData( 'hotels.tmpl.js', '.accomidations', AJAX_DATA, basicDataHandler);
-						
+						switch (page_checker()) {
+							case 'bus_listing_page':
+								vdm.getData(['business.tmpl.js', 'business_bot.tmpl.js'], '.accomidations', AJAX_DATA, businessDataHandler);
+								break;
+							default:
+								vdm.getData( 'hotels.tmpl.js', '.accomidations', AJAX_DATA, basicDataHandler);
+								break;
+						}
 						$(this).parent().removeClass('open');
 						$(this).parent().find('li').fadeOut(10);
 						$(this).parent().find('li:first-child').fadeIn('medium');

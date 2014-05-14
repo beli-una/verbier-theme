@@ -24,10 +24,17 @@ $(document).ready(function() {
                         $(this).parent().find("li").eq(0).text($(this).text()), $(this).parent().find("li").removeClass("selected"), 
                         $(this).addClass("selected");
                         var val = $(this).data("value"), txt = $(this).text();
-                        AJAX_DATA.filter[dataType] && (delete AJAX_DATA.filter[dataType], $(".village").remove()), 
+                        switch (AJAX_DATA.filter[dataType] && (delete AJAX_DATA.filter[dataType], $(".village").remove()), 
                         AJAX_DATA.filter[dataType] = [ val ], AJAX_DATA.display[dataType] = [ txt ], Session.set("filter", {
                             village: val
-                        }), vdm.getData("hotels.tmpl.js", ".accomidations", AJAX_DATA, basicDataHandler), 
+                        }), page_checker()) {
+                          case "bus_listing_page":
+                            vdm.getData([ "business.tmpl.js", "business_bot.tmpl.js" ], ".accomidations", AJAX_DATA, businessDataHandler);
+                            break;
+
+                          default:
+                            vdm.getData("hotels.tmpl.js", ".accomidations", AJAX_DATA, basicDataHandler);
+                        }
                         $(this).parent().removeClass("open"), $(this).parent().find("li").fadeOut(10), $(this).parent().find("li:first-child").fadeIn("medium");
                     }
                 }
