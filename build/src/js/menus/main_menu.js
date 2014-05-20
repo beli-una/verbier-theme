@@ -37,7 +37,6 @@ $( document ).ready(function( e ){
 		$('#hs_activities_summer .nav_item_level_1').show();
 	});
 	
-	$('#hs_activities_winter>span>a').trigger('click');	
 });
 
 function tier1Handler( e ){

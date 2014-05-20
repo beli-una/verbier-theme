@@ -31,5 +31,5 @@ $(document).ready(function() {
     }), $("#hs_activities_summer>span>a").on("click", function(e) {
         e.preventDefault(), $("#hs_activities_winter").removeClass("selected"), $("#hs_activities_summer").addClass("selected"), 
         $("#hs_activities_winter .nav_item_level_1").hide(), $("#hs_activities_summer .nav_item_level_1").show();
-    }), $("#hs_activities_winter>span>a").trigger("click");
+    });
 });
