@@ -59,7 +59,7 @@ function documentReadyHandler() {
             vdm.getData(['events.tmpl.js', 'business_bot.tmpl.js', 3], ".activities", null, businessDataHandler);
             vdm.getData(['events.tmpl.js', 'business_bot.tmpl.js', 3], ".art", null, businessDataHandler);
             vdm.getData(['events.tmpl.js', 'business_bot.tmpl.js', 3], ".culture", null, businessDataHandler);
-            vdm.getData(['events.tmpl.js', 'business_bot.tmpl.js', 3], ".accomidations", null, businessDataHandler);
+            vdm.getData(['events.tmpl.js', 'business_bot.tmpl.js', 3], ".accomidations", current_time_filter(), businessDataHandler);
 
             initAutoLoad(".accomidations", ['events.tmpl.js', 'business_bot.tmpl.js', 3], paginationBusinessCallBack);
             // Home page
